@@ -60,6 +60,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
     };
 
     app.initPlugins = function() {
+      APP.Modules.Fullpage.init();
       APP.Modules.Sliders.init();
       APP.Modules.Modals.init();
       APP.Modules.Masks.init();
@@ -67,14 +68,10 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Modules.ScrollReveal.init();
       APP.Modules.TextareaAutoExpand.init();
       APP.Modules.Validations.init();
-
-      // APP.Modules.Countdown.init();
-      // APP.Modules.FooterReveal.init();
     };
 
     app.initComponenets = function() {
       APP.Componenets.Header.init();
-      APP.Componenets.Test.init();
     };
 
     return app;

@@ -12,12 +12,12 @@
   &__title
     text-align: center
     p
-      color: #C6C6C6
+      color: $colorPrimary
       text-align: center
       display: inline-block
       position: relative
       text-transform: uppercase
-      font-family: 'Teko', sans-serif
+      font-family: $tekoFont
       font-size: 14px
       font-weight: 600
       &:before
@@ -26,7 +26,7 @@
         content: ''
         width: 100%
         height: 1px
-        background: #EA4D27
+        background: $colorOrange
         top: -4px
 
   &__wrapper
@@ -52,14 +52,14 @@
       margin-bottom: 50px
       color: #fff
       text-transform: uppercase
-      font-family: 'Teko', sans-serif
+      font-family: $tekoFont
       font-weight: 700
       &:last-child
         margin-bottom: 0
     a
       transition: .25s $ease
       &:hover
-        color: #EA4D27
+        color: $colorOrange
 
 
   &__cta
@@ -84,7 +84,7 @@
       position: absolute
       width: 30px
       height: 1px
-      background: #C6C6C6
+      background: $colorPrimary
       left: 50%
       transform: translateX(-50%)
       display: block
@@ -98,20 +98,20 @@
     margin: 0 13px
 
     &:hover
-      color: #EA4D27
+      color: $colorOrange
 
     &--behance
       color: transparent
       stroke: #fff
       &:hover
-        stroke: #EA4D27
+        stroke: $colorOrange
         color: transparent
 
     &--facebook
       color: transparent
       stroke: #fff
       &:hover
-        stroke: #EA4D27
+        stroke: $colorOrange
         color: transparent
 
 +r($md)

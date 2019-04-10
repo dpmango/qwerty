@@ -8,7 +8,15 @@
         img(src='img/fpScreenBg_1.png' srcset='img/fpScreenBg_1@2x.png 2x')
       .section__content
         .container.y-center-flex
-          h1 We khow all about digital future
+          .section__info
+            h1 
+              span.line We
+              |  know all 
+              span.little about 
+              span.ls digital fu
+                span.t-letter i
+                | ure
+            p.section__info-description Creators of world class websites, brand identity and advance.
           .section__scroll
             span
             | scroll to discover
@@ -18,7 +26,7 @@
         img(src='img/fpScreenBg_2.png' srcset='img/fpScreenBg_2@2x.png 2x')
       .section__content
         .container.y-center-flex
-          h1 section 2
+          a.section__popup-btn(href="https://www.youtube.com/watch?v=GS4v7E5QFwE" js-popup-video)
           .section__scroll
             span
             | scroll to discover or press 
@@ -29,4 +37,41 @@
         img(src='img/fpScreenBg_3.png' srcset='img/fpScreenBg_3@2x.png 2x')
       .section__content
         .container.y-center-flex
-          h1 section 3
+        .section__scroll
+            span
+            | scroll to discover or press 
+            a(href="#")  skip
+    // fp section
+    .section
+      .section__bg.section__bg--gradient
+      .section__content.section__content--padding
+        .section__title
+          p SERVICE
+        .container.y-center-flex
+          h2 CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
+          .service__grid
+            .service__item
+              .service__icon-container
+                .service__icon
+                  +svgMono('design')
+              p.service__title Design
+              p.service__info We offer our clients the following services: web design, UI / UX design and motion design. We successfully cooperate with small and large companies of various activities and make design talk about your company and increase the response of your customers.
+            .service__item
+              .service__icon-container
+                .service__icon-border
+                  .service__icon
+                    +svgMono('development')
+              p.service__title Development
+              p.service__info We create all kinds of websites, namely, online stores, corporate sites, landing pages and many others. We do high-quality web development for you as for yourself. Only fresh ideas and no cliches –our employees, who is responsible for web development and support service, follow this rule."
+            .service__item
+              .service__icon-container
+                .service__icon
+                  +svgMono('branding')
+              p.service__title Branding
+              p.service__info Our company differs from our competitors. We have achieved great success when working in the following areas: brand strategy, brand identity, visual identification system, packaging design and naming
+            .service__item
+              .service__icon-container
+                .service__icon
+                  +svgMono('analis')
+              p.service__title Analis and Promotion
+              p.service__info We can handle with work you are never imagined. SMM, SEO, targeting advertising and AdWords are those skills that we are perfect to provide and always try to exceed the result expectations of our custumers. 

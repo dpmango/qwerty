@@ -62,3 +62,28 @@ html.mfp-helper
     opacity: 0.8
   &.mfp-removing.mfp-bg
     opacity: 0
+
+
+/**
+ * Simple fade transition,
+
+.mfp-fade
+  &.mfp-bg
+    opacity: 0
+    -webkit-transition: all 0.15s ease-out
+    -moz-transition: all 0.15s ease-out
+    transition: all 0.15s ease-out
+    &.mfp-ready
+      opacity: 0.8
+    &.mfp-removing
+      opacity: 0
+  &.mfp-wrap
+    .mfp-content
+      opacity: 0
+      -webkit-transition: all 0.15s ease-out
+      -moz-transition: all 0.15s ease-out
+      transition: all 0.15s ease-out
+    &.mfp-ready .mfp-content
+      opacity: 1
+    &.mfp-removing .mfp-content
+      opacity: 0

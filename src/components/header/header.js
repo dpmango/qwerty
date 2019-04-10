@@ -8,6 +8,7 @@
       this.updateHeaderActiveClass();
       this.hamburgerClickListener();
       this.languageActive();
+      this.scrollToNextSection();
     },
     closeMobileMenu: function(isOnload) {
       $('[js-hamburger]').removeClass('is-active');
@@ -30,6 +31,21 @@
 
         APP.Modules.ScrollBlock.blockScroll();
       });
+    },
+
+    scrollToNextSection: function() {
+      // $(document).on('click', '[js-scroll-to-section]', function() {
+      //   var fuller = $(this)
+      //       .closest('.section')
+      //       .next(),
+      //     section = $(this).closest('.fullpage');
+      //   section.animate(
+      //     {
+      //       scrollTop: section.scrollTop() + fuller.offset().top,
+      //     },
+      //     700,
+      //   );
+      // });
     },
     updateHeaderActiveClass: function() {
       // SET ACTIVE CLASS IN HEADER

@@ -58,10 +58,44 @@ body, html
   padding-left: 40px
   padding-right: 40px
 
+h1
+  font-size: 64px
+  text-transform: uppercase
+  color: #fff
+  font-family: $tekoFont
+  font-weight: 700
+  margin: 0
+  line-height: 1.2
+
+h2
+  font-family: $tekoFont
+  font-size: 20px
+  text-transform: uppercase
+  color: $colorPrimary
+  text-align: center
+  margin-bottom: 80px
+  letter-spacing: 2px
+
++r($md)
+  h1
+    font-size: 30px
+
+  h2
+    font-size: 18px
+    margin-bottom: 40px
+
 +r($sm)
   .container
     padding-left: 20px
     padding-right: 20px
+
+// move to general elements
+.y-center-flex
+  flex: 1 1 auto
+  display: flex
+  flex-direction: column
+  justify-content: center
+  // padding-bottom: 45px
 
 // REMOVE FOR PRODUCTION !
 .dev-bp-debug

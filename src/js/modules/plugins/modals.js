@@ -41,6 +41,16 @@
           tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
         },
       });
+
+      $('[js-popup-video]').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+
+        fixedContentPos: false,
+      });
     },
     destroy: function() {
       // ... code ...

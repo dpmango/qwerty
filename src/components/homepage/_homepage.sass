@@ -3,6 +3,7 @@
 
 // fullpage instance
 .section
+
   &__bg
     position: absolute 0
     z-index: 1
@@ -10,11 +11,117 @@
       width: 100%
       height: 100%
       object-fit: cover
+
+    &--gradient
+      background: #0E121C
+      position: relative
+      height: 100%
+      &:before
+        position: absolute
+        display: block
+        content: ''
+        width: 100%
+        height: 100%
+        background: linear-gradient(to bottom, rgba(110,28,185,1) 0%,rgba(224,117,25,1) 100%)
+        opacity: 0.2
+
   &__content
     position: absolute 0
     z-index: 2
     display: flex
     flex-direction: column
+
+    overflow-y: auto 
+    
+    // не знаю насколько правильное решение 
+    // но при большом количестве информации 
+    // нужно как то скролить то что внутри блока, 
+    // например блок сервис
+
+    
+    &--padding
+      padding: 50px 0
+
+  &__title
+    text-align: center
+    p
+      color: $colorPrimary
+      text-align: center
+      display: inline-block
+      position: relative
+      text-transform: uppercase
+      font-family: $tekoFont
+      font-size: 14px
+      font-weight: 600
+      &:before
+        position: absolute
+        display: block
+        content: ''
+        width: 100%
+        height: 1px
+        background: $colorOrange
+        top: -4px
+
+  &__info
+    max-width: 550px
+
+    h1
+      letter-spacing: 2px
+
+    span.line
+      position: relative
+      &:before
+        position: absolute
+        content: ''
+        display: block
+        width: 100%
+        height: 1px
+        background: $colorOrange
+        left: -2px
+        top: 6px
+
+    span.little
+      font-size: 20px
+      font-weight: 600
+      text-transform: none
+      vertical-align: middle
+
+    span.ls
+      letter-spacing: 4px
+      position: relative
+      &:before
+        position: absolute
+        content: ''
+        display: block
+        width: 98%
+        height: 3px
+        background: #fff
+        left: 1%
+        top: 8px
+
+
+    span.t-letter
+      position: relative
+      &:before
+        position: absolute
+        display: block
+        content: ''
+        width: 11px
+        height: 10px
+        top: 11px
+        left: 3px
+        background: #fff
+
+  &__popup-btn
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 280px
+    height: 200px
+    outline: 1px solid rgba(255,255,255, 0.05)
+    display: block
+
 
   &__scroll
     position: absolute
@@ -22,12 +129,12 @@
     transform: translateX(-50%)
     bottom: 20px
     text-align: center
-    color: #C6C6C6
-    font-family: 'Roboto Condensed', sans-serif;
+    color: $colorPrimary
+    font-family: $robotoFont
     font-weight: 700
     font-size: 14px
     a
-      border-bottom: 1px solid #C6C6C6
+      border-bottom: 1px solid $colorPrimary
       transition: all 0.25s ease
       &:hover
         border-color: transparent
@@ -37,7 +144,7 @@
       transform: translateX(-50%)
       width: 16px
       height: 26px
-      border: 1px solid #C6C6C6
+      border: 1px solid $colorPrimary
       border-radius: 50px
       bottom: 22px
       &:before
@@ -46,7 +153,7 @@
         content: ''
         width: 1px
         height: 3px
-        background: #C6C6C6
+        background: $colorPrimary
         left: 50%
         transform: translateX(-50%)
         top: 4px
@@ -55,6 +162,61 @@
         animation-duration: 2.2s
         animation-timing-function: cubic-bezier(.15,.41,.69,.94)
         animation-iteration-count: infinite
+
+.service
+
+  &__grid
+    max-width: 700px
+    margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+  
+  &__item
+    max-width: 306px
+    width: 100%
+    margin: 15px
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2)
+    padding: 20px
+    text-align: center
+    min-height: 290px
+  
+  &__icon-container
+    margin: 0 auto
+    width: 70px
+    height: 70px
+    border-radius: 50%
+    border: 1px solid $colorPrimary
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &__icon
+    font-size: 32px
+    color: $colorOrange
+    line-height: 1
+    &-border
+      padding: 5px 8px
+      border: 1px solid $colorOrange
+      .service__icon
+        font-size: 14px
+
+  &__title
+    font-size: 14px
+    color: $colorPrimary
+    font-family: $tekoFont
+    letter-spacing: 2px
+    font-weight: 600
+    margin: 10px auto 15px
+
+  &__info
+    font-size: 12px
+    font-family: $montseratFont
+    font-weight: 300
+    line-height: 1.5
+    color: $colorLight
+
+
 
 @keyframes scroll
   0%
@@ -67,11 +229,3 @@
   100%
     transform: translateY(15px)
     opacity: 0
-
-// move to general elements
-.y-center-flex
-  flex: 1 1 auto
-  display: flex
-  flex-direction: column
-  justify-content: center
-  padding-bottom: 45px

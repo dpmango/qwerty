@@ -26,6 +26,12 @@
             e.stopPropagation();
           }
         })
+
+        // scroll to section skip button
+        .on('click', '[js-move-down]', function() {
+          $.fn.fullpage.moveSectionDown();
+        })
+
         // scroll to section
         .on('click', 'a[href^="#section"]', function() {
           // section scroll

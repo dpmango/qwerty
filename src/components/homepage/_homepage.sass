@@ -3,6 +3,7 @@
 
 // fullpage instance
 .section
+  position: relative
 
   &__bg
     position: absolute 0
@@ -14,7 +15,7 @@
 
     &--gradient
       background: #0E121C
-      position: relative
+      position: absolute
       height: 100%
       &:before
         position: absolute
@@ -26,12 +27,12 @@
         opacity: 0.2
 
   &__content
-    position: absolute 0
+    position: relative 0
     z-index: 2
     display: flex
     flex-direction: column
 
-    overflow-y: auto 
+    // overflow-y: auto 
 
     // не знаю насколько правильное решение 
     // но при большом количестве информации 
@@ -65,6 +66,27 @@
   &__info
     max-width: 550px
 
+    &-description
+      margin-left: 210px
+      font-size: 16px
+      letter-spacing: 1px
+      color: #fff
+      line-height: 1.4
+      padding-left: 18px
+      position: relative
+      font-family: $montseratFont
+      font-weight: 300
+      max-width: 260px
+      &:before
+        position: absolute
+        left: 0
+        top: 0
+        height: 100%
+        width: 1px
+        background: $colorOrange
+        display: block
+        content: ''
+
     h1
       letter-spacing: 2px
 
@@ -96,21 +118,8 @@
         width: 98%
         height: 3px
         background: #fff
-        left: 1%
-        top: 8px
-
-
-    span.t-letter
-      position: relative
-      &:before
-        position: absolute
-        display: block
-        content: ''
-        width: 11px
-        height: 10px
-        top: 11px
-        left: 3px
-        background: #fff
+        left: 0.8%
+        top: 10px
 
   &__popup-btn
     position: absolute
@@ -133,6 +142,7 @@
     font-family: $robotoFont
     font-weight: 700
     font-size: 14px
+    z-index: 2
     a
       border-bottom: 1px solid $colorPrimary
       transition: all 0.25s ease
@@ -235,3 +245,25 @@
   100%
     transform: translateY(15px)
     opacity: 0
+
+
++r($md)
+  .section
+
+    &__scroll
+      width: 100%
+
+    &__info
+
+      span.little
+        font-size: 16px
+
+      span.ls
+        &:before
+          height: 2px
+          top: 3px
+
+      &-description
+        font-size: 14px
+        margin-left: 40px
+        max-width: 200px

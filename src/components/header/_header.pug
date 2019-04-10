@@ -5,17 +5,43 @@ header.header
       a(href="homepage.html").header__logo
         +svgMono('logo')
 
-      .header__hamburger
-        .hamburger.hamburger--squeeze(js-hamburger)
-          .hamburger-box
-            .hamburger-inner
+      .header__right
+        .header__hamburger
+          .hamburger.hamburger--squeeze(js-hamburger)
+            .hamburger-box
+              .hamburger-inner
+        .header__languages-block
+          a.header__language.is-active(href="#" js-choose-language) EN
+          a.header__language(href="#" js-choose-language) GE
+          a.header__language(href="#" js-choose-language) RU
     
 // MOBILE NAVI
 .mobile-navi
+  .section__bg
+    img(src='img/mobile-menu.png' srcset='img/mobile-menu@2x.png 2x')
   .mobile-navi__wrapper
+    .mobile-navi__title
+      p menu
     ul.mobile-navi__menu
       li
-        a(href="homepage.html") Homepage
+        a(href="homepage.html") PORTFOLIO
+      li
+        a(href="#") SERVICE
+      li
+        a(href="#") ABOUT
+      li
+        a(href="#") CONTACTS
+      li
+        a(href="#") VACANCIES
+      li
+        a(href="#") BLOG
 
-    .mobile-navi__cta
-      a(href="mailto:sergey@khmelevskoy.co") sergey@khmelevskoy.co
+    .mobile-navi__socials
+      a.mobile-navi__icon.mobile-navi__icon--dribble(href="#")
+        +svgMono('dribble')
+      a.mobile-navi__icon.mobile-navi__icon--behance(href="#")
+        +svgMono('behance')
+      a.mobile-navi__icon.mobile-navi__icon--instagram(href="#")
+        +svgMono('instagram')
+      a.mobile-navi__icon.mobile-navi__icon--facebook(href="#")
+        +svgColor('facebook')

@@ -7,6 +7,7 @@
     init: function() {
       this.updateHeaderActiveClass();
       this.hamburgerClickListener();
+      this.languageActive();
     },
     closeMobileMenu: function(isOnload) {
       $('[js-hamburger]').removeClass('is-active');
@@ -18,6 +19,14 @@
       _document.on('click', '[js-hamburger]', function() {
         $(this).toggleClass('is-active');
         $('.mobile-navi').toggleClass('is-active');
+
+        APP.Modules.ScrollBlock.blockScroll();
+      });
+    },
+    languageActive: function() {
+      _document.on('click', '[js-choose-language]', function() {
+        $('.header__language').removeClass('is-active');
+        $(this).addClass('is-active');
 
         APP.Modules.ScrollBlock.blockScroll();
       });

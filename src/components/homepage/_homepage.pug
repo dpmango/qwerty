@@ -74,10 +74,40 @@
               p.service__title Analis and Promotion
               p.service__info We can handle with work you are never imagined. SMM, SEO, targeting advertising and AdWords are those skills that we are perfect to provide and always try to exceed the result expectations of our custumers. 
     // fp section
-    .section
+    .section.section--contacts
+      .contacts__contacts-bg
       .section__bg.section__bg--gradient
+        .contacts__letter
+          p q
+          p q
       .section__content.section__content--padding
         .section__title
           p contacts
         .container.y-center-flex
-          h2 JUST LEAVE REQUEST, AND OUR REPRESENTATIVE WILL IMMEDIATELY CONTACT YOU
+          h2.white JUST LEAVE REQUEST, AND OUR REPRESENTATIVE WILL IMMEDIATELY CONTACT YOU
+          form.js-form-homepage(action="#")
+            .input-container
+              input(type="text" name="name" placeholder="name")
+            .input-container
+              input(type="text" name="phone" placeholder="phone")
+            .input-container
+              input(type="text" name="email" placeholder="email")
+            .input-container.input-container--textarea
+              span
+              span
+              textarea(placeholder="message" name="message")
+            input.btn(type="submit" value="send")
+      .section__footer
+        .container
+          .section__footer-left
+            p 2018 QWERTY STUDIO
+          .section__footer-right
+            .mobile-navi__socials
+              a.mobile-navi__icon.mobile-navi__icon--dribble(href="#")
+                +svgMono('dribble')
+              a.mobile-navi__icon.mobile-navi__icon--behance(href="#")
+                +svgMono('behance')
+              a.mobile-navi__icon.mobile-navi__icon--instagram(href="#")
+                +svgMono('instagram')
+              a.mobile-navi__icon.mobile-navi__icon--facebook(href="#")
+                +svgColor('facebook')

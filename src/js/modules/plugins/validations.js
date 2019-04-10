@@ -12,10 +12,14 @@
         error.appendTo(element.parent('div'));
       };
       var validateHighlight = function(element) {
-        $(element).addClass('has-error');
+        $(element)
+          .parent()
+          .addClass('has-error');
       };
       var validateUnhighlight = function(element) {
-        $(element).removeClass('has-error');
+        $(element)
+          .parent()
+          .removeClass('has-error');
       };
       var validateSubmitHandler = function(form) {
         $(form).addClass('loading');
@@ -55,14 +59,14 @@
       /////////////////////
       // REGISTRATION FORM
       ////////////////////
-      $('.js-registration-form').validate({
+      $('.js-form-homepage').validate({
         errorPlacement: validateErrorPlacement,
         highlight: validateHighlight,
         unhighlight: validateUnhighlight,
         submitHandler: validateSubmitHandler,
         rules: {
-          last_name: 'required',
-          first_name: 'required',
+          name: 'required',
+          phone: 'required',
           email: {
             required: true,
             email: true,
@@ -74,8 +78,8 @@
           // phone: validatePhone
         },
         messages: {
-          last_name: 'Заполните это поле',
-          first_name: 'Заполните это поле',
+          name: 'Заполните это поле',
+          phone: 'Заполните это поле',
           email: {
             required: 'Заполните это поле',
             email: 'Email содержит неправильный формат',

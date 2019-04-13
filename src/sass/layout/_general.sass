@@ -157,15 +157,33 @@ h2
 
 +r($md)
   h1
-    font-size: 30px
-    max-width: 250px
+    font-size: 35px
+    max-width: 300px
 
   h2
     font-size: 18px
     margin-bottom: 40px
   
   .input-container
-    margin-top: 30px
+    margin-top: 25px
+    &--textarea
+      &:before
+        top: 23px
+      span
+        top: 48px
+        &:nth-child(2)
+          top: 73px
+    input[type=text],
+    textarea
+      font-size: 11px
+      padding: 6px 10px
+    textarea
+      min-height: 36px
+      line-height: 2.3
+      padding: 0 10px
+      height: 72px
+      max-height: 72px
+      overflow: hidden
 
 +r($sm)
   .container

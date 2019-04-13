@@ -2,6 +2,10 @@
 // SLIDERS
 //////////
 (function($, APP) {
+  var aboutSwiper = {
+    instance: undefined,
+    disableOn: 992,
+  };
   APP.Modules.Sliders = {
     init: function() {
       // EXAMPLE SWIPER
@@ -33,6 +37,53 @@
           },
         },
       });
+
+      // INIT CHECKERS
+      var aboutSelector = '[js-mobile-slider]';
+
+      if ($(aboutSelector).length > 0) {
+        if (_window.width() >= aboutSwiper.disableOn) {
+          if (aboutSwiper.instance !== undefined) {
+            aboutSwiper.instance.destroy(true, true);
+            aboutSwiper.instance = undefined;
+          }
+          // return
+        } else {
+          if (aboutSwiper.instance === undefined) {
+            // ABOUT SWIPER
+            aboutSwiper.instance = new Swiper(aboutSelector, {
+              wrapperClass: 'swiper-wrapper',
+              slideClass: 'swiper-slide',
+              wrapperClass: 'swiper-wrapper',
+              direction: 'horizontal',
+              loop: true,
+              watchOverflow: true,
+              setWrapperSize: true,
+              centeredSlides: true,
+              spaceBetween: 0,
+              slidesPerView: 1,
+              normalizeSlideIndex: true,
+              grabCursor: true,
+              freeMode: false,
+              pagination: {
+                el: '.swiper-pagination',
+              },
+              breakpoints: {
+                // when window width is <= 992px
+                992: {
+                  spaceBetween: 36,
+                },
+                576: {
+                  spaceBetween: 20,
+                },
+                414: {
+                  spaceBetween: 10,
+                },
+              },
+            });
+          }
+        }
+      }
     },
     destroy: function() {
       // ... code ...

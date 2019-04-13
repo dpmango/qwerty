@@ -3,7 +3,7 @@
 .homepage
   .fullpage(js-fullpage)
     // fp section
-    .section
+    .section.section--firstscreen
       .section__bg
         img(src='img/fpScreenBg_1.png' srcset='img/fpScreenBg_1@2x.png 2x')
       .section__content
@@ -20,17 +20,23 @@
         | scroll to discover
     // fp section
     .section
-      .section__bg
+      .section__bg.section__bg--different
         img(src='img/fpScreenBg_2.png' srcset='img/fpScreenBg_2@2x.png 2x')
+        img.mobile-bg(src='img/mobile-bg.jpg' srcset='img/mobile-bg@2x.jpg 2x')
       .section__content
         .container.y-center-flex
           a.section__popup-btn(href="https://www.youtube.com/watch?v=GS4v7E5QFwE" js-popup-video)
+            .section__mobile
+              p CREATIVITY
+              .section__mobile-icon
+                +svgColor('play')
+              p FUTURE
       .section__scroll
         span
         | scroll to discover or press 
         a(href="#" js-move-down)  skip
     // fp section
-    .section
+    .section.section--portfolio
       .section__bg
         img(src='img/fpScreenBg_3.png' srcset='img/fpScreenBg_3@2x.png 2x')
       .section__content
@@ -40,39 +46,47 @@
           | scroll to discover or press 
           a(href="#" js-move-down)  skip
     // fp section
-    .section
+    .section.section--service
       .section__bg.section__bg--gradient
       .section__content.section__content--padding
         .section__title
           p SERVICE
+        .section__title.section__title--mobile
+          p showreal
         .container.y-center-flex
           h2 CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
-          .service__grid
-            .service__item
-              .service__icon-container
-                .service__icon
-                  +svgMono('design')
-              p.service__title Design
-              p.service__info We offer our clients the following services: web design, UI / UX design and motion design. We successfully cooperate with small and large companies of various activities and make design talk about your company and increase the response of your customers.
-            .service__item
-              .service__icon-container
-                .service__icon-border
+          .service__slider-container(js-mobile-slider)
+            .service__grid.swiper-wrapper
+              .service__item.swiper-slide
+                p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
+                .service__icon-container
                   .service__icon
-                    +svgMono('development')
-              p.service__title Development
-              p.service__info We create all kinds of websites, namely, online stores, corporate sites, landing pages and many others. We do high-quality web development for you as for yourself. Only fresh ideas and no cliches –our employees, who is responsible for web development and support service, follow this rule."
-            .service__item
-              .service__icon-container
-                .service__icon
-                  +svgColor('branding')
-              p.service__title Branding
-              p.service__info Our company differs from our competitors. We have achieved great success when working in the following areas: brand strategy, brand identity, visual identification system, packaging design and naming
-            .service__item
-              .service__icon-container
-                .service__icon.service__icon--analis
-                  +svgColor('analis')
-              p.service__title Analis and Promotion
-              p.service__info We can handle with work you are never imagined. SMM, SEO, targeting advertising and AdWords are those skills that we are perfect to provide and always try to exceed the result expectations of our custumers. 
+                    +svgMono('design')
+                p.service__title Design
+                p.service__info We offer our clients the following services: web design, UI / UX design and motion design. We successfully cooperate with small and large companies of various activities and make design talk about your company and increase the response of your customers.
+              .service__item.swiper-slide
+                p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
+                .service__icon-container
+                  .service__icon-border
+                    .service__icon
+                      +svgMono('development')
+                p.service__title Development
+                p.service__info We create all kinds of websites, namely, online stores, corporate sites, landing pages and many others. We do high-quality web development for you as for yourself. Only fresh ideas and no cliches –our employees, who is responsible for web development and support service, follow this rule."
+              .service__item.swiper-slide
+                p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
+                .service__icon-container
+                  .service__icon
+                    +svgColor('branding')
+                p.service__title Branding
+                p.service__info Our company differs from our competitors. We have achieved great success when working in the following areas: brand strategy, brand identity, visual identification system, packaging design and naming
+              .service__item.swiper-slide
+                p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
+                .service__icon-container
+                  .service__icon.service__icon--analis
+                    +svgColor('analis')
+                p.service__title Analis and Promotion
+                p.service__info We can handle with work you are never imagined. SMM, SEO, targeting advertising and AdWords are those skills that we are perfect to provide and always try to exceed the result expectations of our custumers. 
+            .swiper-pagination
     // fp section
     .section.section--contacts
       .contacts__contacts-bg
@@ -86,17 +100,23 @@
         .container.y-center-flex
           h2.white JUST LEAVE REQUEST, AND OUR REPRESENTATIVE WILL IMMEDIATELY CONTACT YOU
           form.js-form-homepage(action="#")
-            .input-container
-              input(type="text" name="name" placeholder="name")
-            .input-container
-              input(type="text" name="phone" placeholder="phone")
-            .input-container
-              input(type="text" name="email" placeholder="email")
-            .input-container.input-container--textarea
-              span
-              span
-              textarea(placeholder="message" name="message")
-            input.btn(type="submit" value="send")
+            .contacts__shadow
+              h2 JUST LEAVE REQUEST, AND OUR REPRESENTATIVE WILL IMMEDIATELY CONTACT YOU
+              .input-container
+                input(type="text" name="name" placeholder="name")
+              .input-container
+                input(type="text" name="phone" placeholder="phone")
+              .input-container
+                input(type="text" name="email" placeholder="email")
+              .input-container.input-container--textarea
+                span
+                span
+                textarea(placeholder="message" name="message")
+            .contacts__success
+              input.btn(type="submit" value="send")
+              p Thank you. Your request has been received and we will get back to you shortly.
+                br
+                | You are amazing!
       .section__footer
         .container
           .section__footer-left

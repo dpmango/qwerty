@@ -29,6 +29,7 @@
           data: $(form).serialize(),
           success: function(response) {
             $(form).removeClass('loading');
+            $('.contacts__success').addClass('send-form');
             var data = $.parseJSON(response);
             if (data.status == 'success') {
               // do something I can't test

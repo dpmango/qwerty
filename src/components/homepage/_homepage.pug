@@ -9,7 +9,8 @@
       .section__content
         .container.y-center-flex
           .section__info
-            img(src="img/h1-homepage.svg", alt="")
+            //- img(src="img/h1-homepage.svg", alt="")
+            +svgColor('homepage')
             //- h1 
             //-   span.line We
             //-   |  know all 
@@ -19,6 +20,7 @@
       .section__scroll
         a(href="#" js-move-down)
           span
+            .dot
         | scroll to discover
     // fp section
     .section
@@ -36,6 +38,7 @@
       .section__scroll
         a(href="#" js-move-down)
           span
+            .dot
         | scroll to discover or press 
         a(href="#" js-move-down)  skip
     // fp section
@@ -47,11 +50,13 @@
       .section__scroll
           a(href="#" js-move-down)
             span
+              .dot
           | scroll to discover or press 
           a(href="#" js-move-down)  skip
     // fp section
     .section.section--service
-      .section__bg.section__bg--gradient
+      .section__bg
+        img(src='img/bg-service.png')
       .section__content.section__content--padding
         .section__title
           p SERVICE
@@ -93,15 +98,19 @@
             .swiper-pagination
     // fp section
     .section.section--contacts
-      .contacts__contacts-bg
-      .section__bg.section__bg--gradient
-        .contacts__letter
-          p q
-          p q
+      //- .contacts__contacts-bg
+      .section__bg
+        img(src='img/bg-contacts.png')
+      .contacts__letter
+        //- p q
+        //- p q
+        img.bg(src='img/bg-contacts.png')
+        img.q-left(src="img/q.png", alt="")
+        img.q(src="img/q.png", alt="")
       .section__content.section__content--padding
         .container.y-center-flex
           .section__title
-            p 2019 QWERTY CO LLC
+            p contacts
           h2.white JUST LEAVE REQUEST, AND OUR REPRESENTATIVE WILL IMMEDIATELY CONTACT YOU
           form.js-form-homepage(action="#")
             .contacts__shadow
@@ -115,7 +124,8 @@
               .input-container.input-container--textarea
                 span
                 span
-                textarea(placeholder="message" name="message")
+                textarea(placeholder="message" name="message" rows="3")
+                //- div(contenteditable="true" placeholder="message")
             .contacts__success
               input.btn(type="submit" value="send")
               p Thank you. Your request has been received and we will get back to you shortly.
@@ -124,14 +134,14 @@
       .section__footer
         .container
           .section__footer-left
-            p 2018 QWERTY STUDIO
+            p 2019 QWERTY CO LLC
           .section__footer-right
             .mobile-navi__socials
               a.mobile-navi__icon.mobile-navi__icon--dribble(href="#")
                 +svgMono('dribble')
               a.mobile-navi__icon.mobile-navi__icon--behance(href="#")
-                +svgMono('behance')
+                +svgColor('behance-new')
               a.mobile-navi__icon.mobile-navi__icon--instagram(href="#")
                 +svgMono('instagram')
               a.mobile-navi__icon.mobile-navi__icon--facebook(href="#")
-                +svgColor('facebook')
+                +svgColor('facebook-new')

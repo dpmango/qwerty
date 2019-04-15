@@ -68,7 +68,11 @@
       display: none
 
   &__info
-    max-width: 550px
+    max-width: 530px
+
+    img
+      width: 95%
+      height: auto
 
     &-description
       margin-left: 210px
@@ -167,8 +171,8 @@
         position: absolute
         display: block
         content: ''
-        width: 1px
-        height: 3px
+        width: 2px
+        height: 2px
         background: $colorPrimary
         left: 50%
         transform: translateX(-50%)
@@ -178,6 +182,7 @@
         animation-duration: 2.2s
         animation-timing-function: cubic-bezier(.15,.41,.69,.94)
         animation-iteration-count: infinite
+        border-radius: 50%
 
   &--contacts
     h2
@@ -235,6 +240,12 @@
     padding: 20px
     text-align: center
     min-height: 290px
+
+    // &:nth-child(2)
+    //   order: -2
+
+    // &:nth-child(3)
+    //   order: 4
   
   &__icon-container
     margin: 0 auto
@@ -279,6 +290,15 @@
 
   &__mobile-title
     display: none
+
++rmin($md)
+  .service
+    &__item
+      &:nth-child(2)
+        order: -2
+
+      &:nth-child(3)
+        order: 4
 
 .contacts
   &__contacts-bg
@@ -333,13 +353,14 @@
 @keyframes scroll
   0%
     opacity: 0
+    transform: translateX(-50%)
 
   10%
-    transform: translateY(0)
+    transform: translateX(-50%) translateY(0)
     opacity: 1
 
   100%
-    transform: translateY(15px)
+    transform: translateX(-50%) translateY(15px)
     opacity: 0
 
 
@@ -460,6 +481,10 @@
 
     &__info
 
+      img
+        width: 255px
+        height: auto
+
       span.little
         font-size: 16px
 
@@ -471,14 +496,11 @@
       &-description
         font-size: 14px
         max-width: 100%
-        margin-left: 0
-        text-align: center
-        padding-left: 0
+        margin-left: 80px
+        padding-left: 10px
         color: #fff
-        margin-top: 80px
-        margin-bottom: -80px
-        &:before
-          display: none
+        margin-top: 50px
+        margin-bottom: -40px
     &__footer
       bottom: 25px
       p

@@ -9,14 +9,16 @@
       .section__content
         .container.y-center-flex
           .section__info
-            h1 
-              span.line We
-              |  know all 
-              span.little about 
-              span.ls digital future
+            img(src="img/h1-homepage.svg", alt="")
+            //- h1 
+            //-   span.line We
+            //-   |  know all 
+            //-   span.little about 
+            //-   span.ls digital future
             p.section__info-description Creators of world class websites, brand identity and advance.
       .section__scroll
-        span
+        a(href="#" js-move-down)
+          span
         | scroll to discover
     // fp section
     .section
@@ -32,7 +34,8 @@
                 +svgColor('play')
               p FUTURE
       .section__scroll
-        span
+        a(href="#" js-move-down)
+          span
         | scroll to discover or press 
         a(href="#" js-move-down)  skip
     // fp section
@@ -42,7 +45,8 @@
       .section__content
         .container.y-center-flex
       .section__scroll
-          span
+          a(href="#" js-move-down)
+            span
           | scroll to discover or press 
           a(href="#" js-move-down)  skip
     // fp section
@@ -60,13 +64,6 @@
               .service__item.swiper-slide
                 p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
                 .service__icon-container
-                  .service__icon
-                    +svgMono('design')
-                p.service__title Design
-                p.service__info We offer our clients the following services: web design, UI / UX design and motion design. We successfully cooperate with small and large companies of various activities and make design talk about your company and increase the response of your customers.
-              .service__item.swiper-slide
-                p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
-                .service__icon-container
                   .service__icon-border
                     .service__icon
                       +svgMono('development')
@@ -76,9 +73,9 @@
                 p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
                 .service__icon-container
                   .service__icon
-                    +svgColor('branding')
-                p.service__title Branding
-                p.service__info Our company differs from our competitors. We have achieved great success when working in the following areas: brand strategy, brand identity, visual identification system, packaging design and naming
+                    +svgMono('design')
+                p.service__title Design
+                p.service__info We offer our clients the following services: web design, UI / UX design and motion design. We successfully cooperate with small and large companies of various activities and make design talk about your company and increase the response of your customers.
               .service__item.swiper-slide
                 p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
                 .service__icon-container
@@ -86,6 +83,13 @@
                     +svgColor('analis')
                 p.service__title Analis and Promotion
                 p.service__info We can handle with work you are never imagined. SMM, SEO, targeting advertising and AdWords are those skills that we are perfect to provide and always try to exceed the result expectations of our custumers. 
+              .service__item.swiper-slide
+                p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
+                .service__icon-container
+                  .service__icon
+                    +svgColor('branding')
+                p.service__title Branding
+                p.service__info Our company differs from our competitors. We have achieved great success when working in the following areas: brand strategy, brand identity, visual identification system, packaging design and naming
             .swiper-pagination
     // fp section
     .section.section--contacts
@@ -97,7 +101,7 @@
       .section__content.section__content--padding
         .container.y-center-flex
           .section__title
-            p contacts
+            p 2019 QWERTY CO LLC
           h2.white JUST LEAVE REQUEST, AND OUR REPRESENTATIVE WILL IMMEDIATELY CONTACT YOU
           form.js-form-homepage(action="#")
             .contacts__shadow

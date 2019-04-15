@@ -345,9 +345,14 @@
 
 +r($md)
 
+  .fullpage
+    display: flex
+    flex-direction: column
+
   .section
 
     &--contacts
+      padding-bottom: 140px
       h2
         display: none
 
@@ -361,11 +366,15 @@
         height: 100%
         padding-bottom: 110px
 
+      form
+        padding: 10px
+        box-shadow: 0px 0px 20px #000000
+
     &__title
       position: absolute
       left: 50%
       transform: translateX(-50%)
-      top: 10px
+      top: 20px
       &--mobile
         display: block
         top: auto
@@ -471,7 +480,6 @@
         &:before
           display: none
     &__footer
-      position: relative
       bottom: 25px
       p
         margin: 0
@@ -490,7 +498,16 @@
 
   .section
 
+    &--firstscreen
+      order: -2
+
+    &--portfolio
+      display: none !important
+
     &--service
+      order: -1
+      min-height: 580px
+      overflow: hidden
       h2
         display: none
 
@@ -520,10 +537,10 @@
       display: none
 
     &__shadow
-      box-shadow: 0px 0px 20px #000000
-      margin: 0 auto
-      width: 100%
-      padding: 10px 0 20px
+      // box-shadow: 0px 0px 20px #000000
+      // margin: 0 auto
+      // width: 100%
+      // padding: 10px 0 20px
 
       h2
         display: block
@@ -584,8 +601,8 @@
       line-height: normal
 
     
-+rh(540)
-  .section
-    &__title
-      &--mobile
-        display: none
+// +rh(540)
+//   .section
+//     &__title
+//       &--mobile
+//         display: none

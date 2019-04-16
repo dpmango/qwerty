@@ -20,7 +20,7 @@
         slidesPerView: 'auto',
         // loop: true,
         normalizeSlideIndex: true,
-        // centeredSlides: true,
+        centeredSlides: true,
         freeMode: true,
         // effect: 'fade',
         autoplay: {

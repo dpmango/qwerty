@@ -14,7 +14,12 @@
     transform: translateX(-50%) translateY(15px)
     opacity: 0
 
+
 // fullpage instance
+
+.fullpage
+  overflow: hidden
+
 .section
   position: relative
   // height: 100vh
@@ -205,6 +210,7 @@
       max-width: 560px
       margin-left: auto
       margin-right: auto
+      display: inline-block
     form
       max-width: 530px
       width: 100%
@@ -213,29 +219,10 @@
     .section__content
       z-index: 4
 
-  // &__footer
-  //   position: absolute
-  //   z-index: 5
-  //   left: 0
-  //   bottom: 30px
-  //   width: 100%
-  //   p
-  //     font-size: 10px
-  //     text-transform: uppercase
-  //     color: #fff
-  //     font-weight: 700
-  //     font-family: $robotoFont
-  //     opacity: 0.8
-    
-  //   .container
-  //     display: flex
-  //     justify-content: space-between
-  //     .mobile-navi__socials
-  //       margin: 0
-  //       &:before
-  //         display: none
-  //     .mobile-navi__icon
-  //       margin: 0 0 0 25px
+  &__container-center
+    text-align: center;
+    width: 100%
+
 
 +rmin($md)
   .service
@@ -256,12 +243,8 @@
     padding: 20px
     text-align: center
     min-height: 290px
+    height: auto
 
-    // &:nth-child(2)
-    //   order: -2
-
-    // &:nth-child(3)
-    //   order: 4
   
   &__icon-container
     margin: 0 auto
@@ -416,7 +399,7 @@
   .fullpage
     display: flex
     flex-direction: column
-    overflow: hidden
+    // overflow: hidden
 
   .section
     height: 100vh
@@ -432,6 +415,7 @@
 
     &--contacts
       height: 100% !important
+      min-height: 100vh
       padding-bottom: 20px
       h2
         display: none

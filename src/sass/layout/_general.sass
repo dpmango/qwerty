@@ -78,70 +78,7 @@ h2
   &.white
     color: #fff
 
-.input-container
-  margin-top: 50px
-  position: relative
-  label
-    display: none !important
-  &.has-error
-    &:before
-      background: linear-gradient(to right, rgba(255,50,50,0) 0%,rgba(255,50,50,1) 50%,rgba(255,50,50,0) 100%);
-  &:before,
-  span
-    position: absolute
-    display: block
-    width: 100%
-    height: 1px
-    bottom: 0
-    left: 0
-    content: ''
-    background: linear-gradient(to right, rgba(154,154,154,0) 0%,rgba(154,154,154,1) 50%,rgba(154,154,154,0) 100%)
-    transition: all 0.25s ease-in-out
-  span
-    width: 80%
-    left: 50%
-    transform: translateX(-50%)
-  &--textarea
-    &:before
-      top: 44px
-    span
-      top: 82px
-      &:nth-child(2)
-        top: 122px
-  input[type=text],
-  textarea
-    font-size: 14px
-    font-weight: 700
-    text-transform: uppercase
-    color: $colorLight
-    text-align: center
-    background: transparent
-    padding: 10px 15px
-    border: none
-    letter-spacing: 1px
-    font-family: $robotoFont
-    line-height: normal
-    resize: none
-    width: 100%
-    -webkit-line-clamp: 2
-    -webkit-box-orient: vertical
-    -o-text-overflow: ellipsis
-    text-overflow: ellipsis
-    
-    &::-webkit-input-placeholder
-      color: $colorLight
-    &::-moz-placeholder
-      color: $colorLight
-    &:-ms-input-placeholder
-      color: $colorLight
-    &:-moz-placeholder
-      color: $colorLight
-  textarea
-    min-height: 36px
-    line-height: 2.4rem
-    height: 135px
-    overflow: hidden
-    display: block
+
 .btn
   border: none
   font-size: 14px
@@ -169,27 +106,6 @@ h2
   h2
     font-size: 18px
     margin-bottom: 40px
-  
-  .input-container
-    margin-top: 25px
-    &--textarea
-      &:before
-        top: 23px
-      span
-        top: 48px
-        &:nth-child(2)
-          top: 73px
-    input[type=text],
-    textarea
-      font-size: 11px
-      padding: 6px 10px
-    textarea
-      min-height: 36px
-      line-height: 2.3
-      padding: 0 10px
-      height: 72px
-      max-height: 72px
-      overflow: hidden
 
 +r($sm)
   .container

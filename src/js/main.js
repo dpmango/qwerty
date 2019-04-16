@@ -66,6 +66,9 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Modules.Masks.init();
       APP.Modules.Selectric.init();
       APP.Modules.ScrollReveal.init();
+      APP.Modules.InputFocuses.init();
+      APP.Modules.LimitRows.init();
+      // APP.Modules.CloneInput.init();
       APP.Modules.TextareaAutoExpand.init();
       APP.Modules.Validations.init();
     };

@@ -9,9 +9,17 @@
   will-change: transform
   backface-visibility: hidden
   transform-style: preserve-3d
+  pointer-events: none
 
   &__phone
     display: none
+    color: #d7d7d7
+    font-size: 24px
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    top: 20px
+    pointer-events: all
 
   &__wrapper
     display: flex
@@ -24,12 +32,14 @@
     font-size: 57px
     color: $colorRed
     padding-right: 30px
+    pointer-events: all
 
   &__right
     margin-left: auto
     padding-left: 20px
     position: absolute
     right: 0
+    pointer-events: all
   
   &__languages-block
     margin-top: 10px
@@ -64,12 +74,6 @@
 
     &__phone
       display: block
-      color: #d7d7d7
-      font-size: 24px
-      position: absolute
-      left: 50%
-      transform: translateX(-50%)
-      top: 20px
     
     &__wrapper
       padding-top: 20px

@@ -39,51 +39,55 @@
       });
 
       // INIT CHECKERS
-      var aboutSelector = '[js-mobile-slider]';
 
-      if ($(aboutSelector).length > 0) {
-        if (_window.width() >= aboutSwiper.disableOn) {
-          if (aboutSwiper.instance !== undefined) {
-            aboutSwiper.instance.destroy(true, true);
-            aboutSwiper.instance = undefined;
-          }
-          // return
-        } else {
-          if (aboutSwiper.instance === undefined) {
-            // ABOUT SWIPER
-            aboutSwiper.instance = new Swiper(aboutSelector, {
-              wrapperClass: 'swiper-wrapper',
-              slideClass: 'swiper-slide',
-              wrapperClass: 'swiper-wrapper',
-              direction: 'horizontal',
-              loop: true,
-              watchOverflow: true,
-              setWrapperSize: true,
-              centeredSlides: true,
-              spaceBetween: 0,
-              slidesPerView: 1,
-              normalizeSlideIndex: true,
-              grabCursor: true,
-              freeMode: false,
-              pagination: {
-                el: '.swiper-pagination',
+      var mySwiper = undefined;
+      function initSwiper() {
+        var screenWidth = $(window).width();
+        if (screenWidth < 768 && mySwiper == undefined) {
+          mySwiper = new Swiper('[js-mobile-slider]', {
+            slideClass: 'swiper-slide',
+            wrapperClass: 'swiper-wrapper',
+            direction: 'horizontal',
+            loop: true,
+            watchOverflow: true,
+            setWrapperSize: true,
+            centeredSlides: true,
+            spaceBetween: 0,
+            slidesPerView: 1,
+            normalizeSlideIndex: true,
+            grabCursor: true,
+            freeMode: false,
+            pagination: {
+              el: '.swiper-pagination',
+            },
+            breakpoints: {
+              // when window width is <= 992px
+              992: {
+                spaceBetween: 36,
               },
-              breakpoints: {
-                // when window width is <= 992px
-                992: {
-                  spaceBetween: 36,
-                },
-                576: {
-                  spaceBetween: 20,
-                },
-                414: {
-                  spaceBetween: 10,
-                },
+              576: {
+                spaceBetween: 20,
               },
-            });
-          }
+              414: {
+                spaceBetween: 10,
+              },
+            },
+          });
+        } else if (screenWidth > 769 && mySwiper != undefined) {
+          mySwiper.destroy();
+          mySwiper = undefined;
+          jQuery('.swiper-wrapper').removeAttr('style');
+          jQuery('.swiper-slide').removeAttr('style');
         }
       }
+
+      //Swiper plugin initialization
+      initSwiper();
+
+      //Swiper plugin initialization on window resize
+      $(window).on('resize', function() {
+        initSwiper();
+      });
     },
     destroy: function() {
       // ... code ...

@@ -50,6 +50,7 @@
     &--padding
       padding: 40px 0
 
+
   &__title
     text-align: center
     p
@@ -61,11 +62,14 @@
       font-family: $tekoFont
       font-size: 14px
       font-weight: 600
+      letter-spacing: 0.15em
       &:before
         position: absolute
         display: block
         content: ''
-        width: 100%
+        width: 30px
+        left: 50%
+        transform: translateX(-50%)
         height: 1px
         background: $colorOrange
         top: -4px
@@ -208,29 +212,29 @@
     .section__content
       z-index: 4
 
-  &__footer
-    position: absolute
-    z-index: 3
-    left: 0
-    bottom: 30px
-    width: 100%
-    p
-      font-size: 10px
-      text-transform: uppercase
-      color: #fff
-      font-weight: 700
-      font-family: $robotoFont
-      opacity: 0.8
+  // &__footer
+  //   position: absolute
+  //   z-index: 3
+  //   left: 0
+  //   bottom: 30px
+  //   width: 100%
+  //   p
+  //     font-size: 10px
+  //     text-transform: uppercase
+  //     color: #fff
+  //     font-weight: 700
+  //     font-family: $robotoFont
+  //     opacity: 0.8
     
-    .container
-      display: flex
-      justify-content: space-between
-      .mobile-navi__socials
-        margin: 0
-        &:before
-          display: none
-      .mobile-navi__icon
-        margin: 0 0 0 25px
+  //   .container
+  //     display: flex
+  //     justify-content: space-between
+  //     .mobile-navi__socials
+  //       margin: 0
+  //       &:before
+  //         display: none
+  //     .mobile-navi__icon
+  //       margin: 0 0 0 25px
 
 +rmin($md)
   .service
@@ -534,22 +538,22 @@
         color: #fff
         margin-top: 50px
         margin-bottom: -40px
-    &__footer
-      bottom: 25px
-      p
-        margin: 0
-      .container
-        width: 100%
-        margin-top: 0px
-        flex-direction: column-reverse
-        justify-content: center
-        align-items: center
+    // &__footer
+    //   bottom: 25px
+    //   p
+    //     margin: 0
+    //   .container
+    //     width: 100%
+    //     margin-top: 0px
+    //     flex-direction: column-reverse
+    //     justify-content: center
+    //     align-items: center
 
-        .mobile-navi__socials
-          margin: 60px 0 20px
+    //     .mobile-navi__socials
+    //       margin: 60px 0 20px
 
-        .mobile-navi__icon
-          margin: 0 17px
+    //     .mobile-navi__icon
+    //       margin: 0 17px
 
   .section
 

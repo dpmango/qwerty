@@ -4,15 +4,32 @@
 (function($, APP) {
   APP.Modules.Fullpage = {
     init: function() {
-      $('[js-fullpage]').fullpage({
+      this.start();
+      this.listenResize();
+    },
+
+    listenResize: function() {
+      _window.on('resize', debounce(this.start, 200));
+    },
+
+    start: function() {
+      var $fullpage = $('[js-fullpage]');
+      var fpOptions = {
         scrollOverflow: true,
         scrollOverflowReset: true,
         responsiveWidth: 768,
-        afterResponsive: function(isResponsive) {},
         // https://github.com/alvarotrigo/fullpage.js
-      });
-    },
+      };
 
-    refresh: function() {},
+      if (_window.width() >= 768) {
+        if (!$('html').hasClass('fp-enabled')) {
+          $fullpage.fullpage(fpOptions);
+        }
+      } else {
+        if ($('html').hasClass('fp-enabled')) {
+          $.fn.fullpage.destroy('all');
+        }
+      }
+    },
   };
 })(jQuery, window.APP);

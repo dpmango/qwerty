@@ -2,6 +2,11 @@
 // HELPERS and PROTOTYPE FUNCTIONS
 //////////////////////////////////
 
+// INIT SELECTRIC
+$(function() {
+  $('select').selectric();
+});
+
 // LINEAR NORMALIZATION
 function normalize(value, fromMin, fromMax, toMin, toMax) {
   var pct = (value - fromMin) / (fromMax - fromMin);

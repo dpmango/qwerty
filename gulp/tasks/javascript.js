@@ -19,7 +19,7 @@ gulp.task('javascript:vendor', function() {
       path.resolve('node_modules', 'aos/dist/aos.js'),
       path.resolve('bower_components', 'scrollMonitor/scrollMonitor.js'),
       path.resolve('bower_components', 'fullpage.js/dist/jquery.fullpage.min.js'),
-      path.resolve('bower_components', 'fullpage.js/vendors/scrolloverflow.js'),
+      path.resolve('bower_components', 'fullpage.js/vendors/scrolloverflow.min.js'),
       path.resolve('bower_components', 'fullpage.js/dist/jquery.fullpage.extensions.min.js'),
       path.resolve('bower_components', 'jquery-validation/dist/jquery.validate.min.js'),
       path.resolve('bower_components', 'jquery-mask-plugin/dist/jquery.mask.min.js'),

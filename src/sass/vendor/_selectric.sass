@@ -10,51 +10,48 @@
   width: 100%
 
 .selectric
-  border: 1px solid #DDD
-  border-radius: 0px
-  background: #F8F8F8
+  // border: 1px solid #DDD
+  // border-radius: 0px
+  // background: #F8F8F8
   position: relative
-  overflow: hidden
+  min-height: 34px
+  z-index: 2
+  text-align: center
   .label
-    display: block
-    white-space: nowrap
-    overflow: hidden
-    text-overflow: ellipsis
-    margin: 0 38px 0 10px
+    -webkit-appearance: none
     font-size: 12px
-    line-height: 38px
-    color: #444
-    height: 38px
-    -webkit-user-select: none
-    -moz-user-select: none
-    -ms-user-select: none
-    user-select: none
-  .button
-    display: block
-    position: absolute
-    right: 0
-    top: 0
-    width: 38px
-    height: 38px
-    line-height: 38px
-    background-color: #F8f8f8
-    color: #BBB
+    font-weight: 700
+    text-transform: uppercase
+    color: $colorLight
     text-align: center
-    font: 0/0 a
-    *font: 20px/38px Lucida Sans Unicode, Arial Unicode MS, Arial
+    background: transparent
+    padding: 10px 15px
+    border: none
+    letter-spacing: 0.05em
+    font-family: $robotoFont
+    line-height: normal
+    resize: none
+    width: auto
+    min-height: 34px
+    position: relative
+    display: inline-block
+    margin: 0 auto
+    position: absolute
+    cursor: pointer
     &:after
       content: " "
       position: absolute
-      top: 0
-      right: 0
-      bottom: 0
-      left: 0
+      top: 45%
+      left: calc(100% - 5px)
       margin: auto
-      width: 0
-      height: 0
-      border: 4px solid transparent
-      border-top-color: #BBB
-      border-bottom: none
+      width: 6px
+      height: 6px
+      border: 1px solid $colorLight
+      transform: translateY(-50%) rotate(45deg) 
+      border-left: none
+      border-top: none
+  .button
+    display: none
 
 .selectric-focus .selectric
   border-color: #aaaaaa
@@ -72,10 +69,14 @@
     border-color: #c4c4c4
   .selectric-items
     display: block
+  .label
+    &:after
+      top: 57%
+      transform: translateY(-50%) rotate(-135deg)
+
 
 .selectric-disabled
-  filter: alpha(opacity = 50)
-  opacity: 0.5
+  opacity: 0.7
   cursor: default
   user-select: none
 
@@ -131,10 +132,8 @@
   position: absolute
   top: 100%
   left: 0
-  background: #F8F8F8
-  border: 1px solid #c4c4c4
+  background: #000
   z-index: -1
-  box-shadow: 0 0 10px -6px
   .selectric-scroll
     height: 100%
     overflow: auto
@@ -148,32 +147,34 @@
     list-style: none
     padding: 0
     margin: 0
-    font-size: 12px
-    line-height: 20px
-    min-height: 20px
   li
     list-style: none
     padding: 0
     margin: 0
+    width: 100%
     font-size: 12px
-    line-height: 20px
-    min-height: 20px
-    display: block
-    padding: 10px
-    color: #666
+    font-weight: 700
+    text-transform: uppercase
+    color: #fff
+    text-align: center
+    background: transparent
+    padding: 10px 15px
+    border: none
+    letter-spacing: 0.05em
+    font-family: "Roboto Condensed", sans-serif
+    line-height: normal
     cursor: pointer
     &.selected
-      background: #E0E0E0
-      color: #444
+      background: #000
+      color: #333
     &.highlighted
       background: #D0D0D0
       color: #444
     &:hover
-      background: #D5D5D5
-      color: #444
+      background: #fff
+      color: #000
   .disabled
-    filter: alpha(opacity = 50)
-    opacity: 0.5
+    opacity: 0.7
     cursor: default !important
     background: none !important
     color: #666 !important
@@ -191,3 +192,23 @@
       opacity: 1
     li
       padding-left: 25px
+
+
++r($md)
+  .selectric
+    .label
+      font-size: 11px
+      padding: 6px 15px
+      min-height: 25px
+      &:after
+        width: 4px
+        height: 4px
+        top: 50%
+  .selectric-open
+    .label
+      &:after
+        top: 57%
+  .selectric-items
+    li
+      font-size: 11px
+      padding: 8px 15px

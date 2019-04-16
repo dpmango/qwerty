@@ -20,6 +20,10 @@
     transform: translateX(-50%)
     top: 20px
     pointer-events: all
+    transition: 0.25s
+    &.is-active
+      transform: translateX(-50%) translateY(-100px)
+      opacity: 0
 
   &__wrapper
     display: flex

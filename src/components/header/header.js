@@ -20,6 +20,7 @@
       _document.on('click', '[js-hamburger]', function() {
         $(this).toggleClass('is-active');
         $('.mobile-navi').toggleClass('is-active');
+        $('.header__phone').toggleClass('is-active');
 
         APP.Modules.ScrollBlock.blockScroll();
       });

@@ -1,0 +1,117 @@
+.about
+
+  .y-center-flex
+    text-align: center
+    width: 100%
+
+  &__title
+    font-family: $tekoFont
+    font-weight: 700
+    font-size: 48px
+    line-height: 1.1
+    text-align: center
+    letter-spacing: 0.1em
+    color: #FFFFFF
+    margin: 0 auto 40px
+    
+
+  &__sub-title
+    font-family: $montseratFont
+    font-size: 16px
+    line-height: 1.7
+    text-align: center
+    letter-spacing: 0.05em
+    color: #FFFFFF
+    margin: 0
+    max-width: 570px
+    margin: 0 auto
+    display: inline-block
+
+  .section__title
+    position: absolute
+    top: 90px
+    z-index: 2
+    left: 50%
+    transform: translateX(-50%)
+    p
+      margin: 0
+  
+  .section__content
+    margin: 80px 0
+
+  .contacts__info
+    max-width: 600px
+    margin: 50px auto 100px
+  .contacts__shadow
+    h2
+      font-family: $tekoFont
+      font-weight: 700
+      font-size: 20px
+      line-height: 1.6
+      text-align: center
+      letter-spacing: 0.1em
+      color: #FFFFFF
+      display: block
+      margin-bottom: 35px
+    p
+      font-family: $montseratFont
+      font-weight: 300
+      font-size: 14px
+      line-height: 1.7
+      text-align: center
+      letter-spacing: 0.03em
+      color: $colorPrimary
+
+  .to-start
+    font-family: $robotoFont
+    font-weight: 700
+    font-size: 14px
+    line-height: 1.2
+    letter-spacing: 0.05em
+    color: $colorPrimary
+    border-bottom: 2px solid $colorPrimary
+    display: inline-block
+    width: auto
+    z-index: 4
+    position: absolute
+    left: 50%
+    transform: translate(-50%)
+    margin: 0
+    top: -2px
+
+  &__link
+    text-align: center
+
+
+    
+
++r($md)
+  .about
+    &__title
+      font-size: 35px
+
+    .section__title
+      top: 30px
+      display: none
+      &--firstscreen
+        display: none
+
+    .section__content
+      margin-top: 30px
+    
+    &__link
+      display: none
+
+    .contacts__info
+      margin: 20px 0 40px
+      &:last-child
+        margin-bottom: -40px
+
+    .contacts__shadow
+      box-shadow: 0px 0px 20px #000000
+      padding: 30px 10px
+      h2
+        font-size: 14px
+        margin: 0 0 20px
+      p
+        line-height: 1.4

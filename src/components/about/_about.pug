@@ -1,0 +1,79 @@
+
+// ABOUT
+.about
+  .fullpage(js-fullpage)
+    // fp section
+    .section
+      .section__title.section__title--firstscreen
+        p about
+      .section__bg(style="background-image: url(img/aboutS1.jpg)")
+      .section__content
+        .container.y-center-flex
+          p.about__title QWERTY AGENCY
+          p.about__sub-title Is an independent creative company that delivers a non-standard approach to provide web, branding and digital marketing services.
+      .section__scroll
+        a(href="#" js-move-down)
+          span
+            .dot
+        | scroll to discover
+    // fp section
+    .section
+      .section__title
+        p about
+      .section__bg(style="background-image: url(img/aboutS2.jpg)")
+      .section__content
+        .container.y-center-flex
+          p.about__title WE
+          p.about__sub-title We know all about the future business concept and we bring this future to life
+      .section__scroll
+        a(href="#" js-move-down)
+          span
+            .dot
+        | scroll to discover
+    // fp section
+    .section
+      .section__title
+        p about
+      .section__bg(style="background-image: url(img/aboutS3.jpg)")
+      .section__content
+        .container.y-center-flex
+          p.about__title IT’IS
+          p.about__sub-title Not about just business, we make things with passion
+      .section__scroll
+          a(href="#" js-move-down)
+            span
+              .dot
+          | scroll to discover
+    .section.section--contacts
+      .section__title
+        p about
+      .section__bg(style="background-image: url(img/bg-service.png)")
+      .contacts__letter
+      .section__content
+        .container.y-center-flex
+          .contacts__info
+            .contacts__shadow
+              h2 WE DELIVER THE ‘’WOW’’ EFFECT, BECAUSE WE GENERATE IDEAS
+              p For us, the business we do is more than just business; we strive to do our best to make clients feel that we are absolutely involved in their business challenges and every day work to translate into practice new ideas to be the best
+            a.btn(href="#") SERVICE
+          .contacts__info
+            .contacts__shadow
+              h2 IF YOU ARE READY TO CREATE THE PROJECT OF YOUR DREAMS LET US KNOW
+              p Contacting our Qwerty Agency, You can be sure not only in the high quality of the services provided, but also in enjoyable price.
+            a.btn(href="#") CONTACTS
+      .section__footer
+        .container
+          .section__footer-left
+            p 2019 QWERTY CO LLC
+          .about__link
+            a.to-start(href="#") return to start
+          .section__footer-right
+            .mobile-navi__socials
+              a.mobile-navi__icon.mobile-navi__icon--dribble(href="#")
+                +svgMono('dribble')
+              a.mobile-navi__icon.mobile-navi__icon--behance(href="#")
+                +svgColor('behance-new')
+              a.mobile-navi__icon.mobile-navi__icon--instagram(href="#")
+                +svgMono('instagram')
+              a.mobile-navi__icon.mobile-navi__icon--facebook(href="#")
+                +svgColor('facebook-new')

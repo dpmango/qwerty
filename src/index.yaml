@@ -3,5 +3,7 @@ ProjectTitle: Qwerty
 PageList:
   - file: homepage.html
     ready: 90
+  - file: about.html
+    ready: 20
   - file: page.html
     ready: 0

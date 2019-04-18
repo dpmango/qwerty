@@ -1,0 +1,46 @@
+
+// PORTFOLIO
+.portfolio
+  .fullpage(js-fullpage)
+    // fp section
+    .section
+      .section__title.section__title--portfolio
+        p portfolio
+      //- .portfolio__next
+      //-   a(href="#") NEXT PROJECT
+      
+      .portfolio__slider
+        .swiper-container(js-portfolio-slider)
+          .swiper-wrapper
+            .swiper-slide(style="background-image: url(img/portfolio-firstscreen-1.jpg)")
+              .container.y-center-flex
+                .portfolio__logo
+                  +svgColor('thrillstore')
+                .portfolio__first-button
+                  a.btn.btn--empty(href="#") VIEW 1
+            .swiper-slide(style="background-image: url(img/portfolio-firstscreen-2.jpg)")
+              .container.y-center-flex
+                .portfolio__logo
+                  +svgColor('thrillstore')
+                .portfolio__first-button
+                  a.btn.btn--empty(href="#") VIEW 2
+            .swiper-slide(style="background-image: url(img/portfolio-firstscreen-3.jpg)")
+              .container.y-center-flex
+                .portfolio__logo
+                  +svgColor('thrillstore')
+                .portfolio__first-button
+                  a.btn.btn--empty(href="#") VIEW 3
+            .swiper-slide(style="background-image: url(img/portfolio-firstscreen-4.jpg)")
+              .container.y-center-flex
+                .portfolio__logo
+                  +svgColor('thrillstore')
+                .portfolio__first-button
+                  a.btn.btn--empty(href="#") VIEW 4
+          .swiper-button-next NEXT PROJECT
+      .section__content
+        //- .container.y-center-flex
+        //-   .portfolio__logo
+        //-     +svgColor('thrillstore')
+        //-   .portfolio__first-button
+        //-     a.btn.btn--empty(href="#") VIEW
+      

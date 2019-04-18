@@ -81,6 +81,18 @@
         }
       }
 
+      var swiper = new Swiper('[js-portfolio-slider]', {
+        spaceBetween: 0,
+        effect: 'fade',
+        loop: true,
+        autoplay: {
+          delay: 5000,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+        },
+      });
+
       //Swiper plugin initialization
       initSwiper();
 

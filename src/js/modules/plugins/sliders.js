@@ -91,6 +91,9 @@
         navigation: {
           nextEl: '.swiper-button-next',
         },
+        pagination: {
+          el: '.swiper-pagination',
+        },
       });
 
       //Swiper plugin initialization

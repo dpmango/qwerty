@@ -1,0 +1,124 @@
+
+// portfolio
+.portfolio
+  .fullpage(js-fullpage)
+    // fp section
+    .section
+      .section__bg(style="background-color: #fff")
+      .section__content.section__content--editable
+        .container.y-center-flex
+          .portfolio__img
+            img(src="img/lion-logo.png", alt="")
+          p.portfolio__title HYPE SNEAKERS AND CLOTHES FROM THE MOST POPULAR BRANDS
+    // fp section
+    .section.section--auto
+      .section__bg(style="background-color: #fff")
+      .section__content
+        .container.y-center-flex
+
+          .portfolio__block
+            h2 MISSION
+            p The task was to change the logo while preserving the unique artistic design, improving the website interface, attracting new customers and traffic from social networks.
+
+          .portfolio__block
+            h2 PRODUCTION
+            .portfolio__list
+              p REBRENDING
+              p DESIGN
+              p WEB USABILITY
+              p SMM PROMOTION
+    // fp section
+    .section.section--auto
+      .section__bg(style="background-color: #000")
+      .section__content.section__content--result
+        .container.y-center-flex
+          .portfolio__bottom
+            .portfolio__result
+              h2 RESULT
+              .portfolio__result-line
+                p.before 01
+                .line
+                p.after REDESIGN
+              p.portfolio__description We changed the logo, made it easier to understand, while maintaining the unique style.
+          .portfolio__logotypes
+            .portfolio__logotypes-buttons
+              a.is-active(href="#" js-open-logo) logo
+              span /
+              a(href="#" js-open-logo-text) logo text
+            .portfolio__logotypes-container
+              .portfolio__logotypes-image.p-logo.is-active
+                img(src="img/lion-logo.png", alt="")
+              .portfolio__logotypes-image.p-logo-text
+                .icon
+                  +svgColor('thrillstore')
+          .portfolio__colors
+            img(src="img/colors.png", alt="")
+    // fp section
+    .section.section--auto
+      .section__bg(style="background-color: #fff")
+      .section__content.section__content--result
+        .container.y-center-flex
+          .portfolio__bottom
+            .portfolio__result.portfolio__result--black
+              h2 RESULT
+              .portfolio__result-line
+                p.before 02
+                .line
+                p.after WEB USABILITY
+              p.portfolio__description We conducted a usability test, identified errors and completely got rid of them. Now the web site interface is convenient for better user orientation and quick transition between web site pages.
+          .portfolio__images
+            .portfolio__images-left
+              img(src="img/screen-1.jpg", alt="")
+              img(src="img/screen-2.jpg", alt="")
+            .portfolio__images-right
+              img(src="img/screen-3.jpg", alt="")
+          .portfolio__buttons
+            img(src="img/buttons.png", alt="")
+    // fp section
+    .section.section--result
+      .section__bg(style="background-color: #000")
+      .section__content.section__content--result
+        .container.y-center-flex
+          .portfolio__bottom
+            .portfolio__result
+              h2 RESULT
+              .portfolio__result-line
+                p.before 03
+                .line
+                p.after SMM PROMOTION
+              p.portfolio__description After studying the current traffic, the target audience and three months of work on promotion, we have achieved these results
+            .portfolio__grid
+              .portfolio__item
+                .portfolio__item-number
+                  p 45%
+                .portfolio__item-info
+                  p The number and growth of target subscribers on Instagram and  VK increased
+              .portfolio__item
+                .portfolio__item-number
+                  p 60%
+                .portfolio__item-info
+                  p Web site traffic increased
+              .portfolio__item
+                .portfolio__item-number
+                  p 1.5
+                    span times
+                .portfolio__item-info
+                  p The number of orders increased by exactly
+            a.btn(href="#") VISIT SITE
+      .section__footer
+        .container
+          .section__footer-left
+            p 2019 QWERTY CO LLC
+          .about__link
+            a.next-project(href="#") next project
+          .section__footer-right
+            .mobile-navi__socials
+              a.mobile-navi__icon.mobile-navi__icon--dribble(href="https://dribbble.com/Qwerty-co" target="_blank")
+                +svgMono('dribble')
+              a.mobile-navi__icon.mobile-navi__icon--behance(href="http://www.behance.net/qwertyagency" target="_blank")
+                +svgColor('behance-new')
+              a.mobile-navi__icon.mobile-navi__icon--instagram(href="https://instagram.com/qwerty.agency" target="_blank")
+                +svgMono('instagram')
+              a.mobile-navi__icon.mobile-navi__icon--facebook(href="https://www.facebook.com/qwerty.co.llc/" target="_blank")
+                +svgColor('facebook-new')
+          

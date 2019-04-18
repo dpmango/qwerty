@@ -4,8 +4,11 @@
   .fullpage(js-fullpage)
     // fp section
     .section
+      .section__bg(style="background-image: url(img/bg-contacts.png)")
       .section__title.section__title--portfolio
         p portfolio
+      .section__studio
+        p 2018 QWERTY STUDIO
       //- .portfolio__next
       //-   a(href="#") NEXT PROJECT
       
@@ -37,7 +40,8 @@
                 .portfolio__first-button
                   a.btn.btn--empty(href="#") VIEW 4
           .swiper-button-next NEXT PROJECT
-      .section__content
+          .swiper-pagination
+      //- .section__content
         //- .container.y-center-flex
         //-   .portfolio__logo
         //-     +svgColor('thrillstore')

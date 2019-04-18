@@ -7,5 +7,7 @@ PageList:
     ready: 20
   - file: portfolio-first.html
     ready: 20
+  - file: portfolio.html
+    ready: 20
   - file: page.html
     ready: 0

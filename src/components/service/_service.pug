@@ -1,0 +1,154 @@
+
+// service
+.service
+  .fullpage(js-fullpage)
+    // fp section
+    .section
+      .section__bg(style="background-image: url(img/bg-contacts.png)")
+      .section__title.section__title--portfolio
+        p service
+      .section__studio
+        p 2018 QWERTY STUDIO
+      
+      .service__slider
+        .container.y-center-flex
+          .swiper-container(js-service-slider)
+            .swiper-wrapper
+              .swiper-slide
+                .service__container
+                  .service__left
+                    p.service__left-title BRANDING
+                    p.service__left-desc Wrapper of your business is one of the most important things
+                    .service__list
+                      .service__list-item
+                        p Branding strategy
+                        p from 1000$
+                      .service__list-item
+                        p Brand identity 
+                        p from 7000$
+                      .service__list-item
+                        p Packaging design
+                        p from 5000$
+                      .service__list-item
+                        p Logo design
+                        p from 3000$
+                      .service__list-item
+                        p Naming
+                        p from 3000$
+                    .service__button
+                      a.btn(href="#") CONTACT
+                  .service__right
+                    .service__right-circle
+                      img(src="img/logo-circle.svg", alt="")
+                      .service__right-icon-container
+                        .service__right-icon
+                          .icon.icon--branding
+                            +svgColor('branding')
+                    .service__progress
+                      p 01
+                        span.line /
+                        span 04
+                      .service__progress-line
+                        span(style="25%")
+
+              .swiper-slide
+                .service__container
+                  .service__left
+                    p.service__left-title Design
+                    p.service__left-desc Web design, UI / UX design and motion design.
+                    .service__list
+                      .service__list-item
+                        p Branding strategy
+                        p from 1000$
+                      .service__list-item
+                        p Brand identity 
+                        p from 7000$
+                      .service__list-item
+                        p Packaging design
+                        p from 5000$
+                      .service__list-item
+                        p Logo design
+                        p from 3000$
+                    .service__button
+                      a.btn(href="#") CONTACT
+                  .service__right
+                    .service__right-circle
+                      img(src="img/logo-circle.svg", alt="")
+                      .service__right-icon-container
+                        .service__right-icon
+                          .icon.icon--design
+                            +svgMono('design')
+                    .service__progress
+                      p 02
+                        span.line /
+                        span 04
+                      .service__progress-line
+                        span(style="50%")
+
+              .swiper-slide
+                .service__container
+                  .service__left
+                    p.service__left-title DEVELOPMENT
+                    p.service__left-desc Let us create the best website in your field of activity
+                    .service__list
+                      .service__list-item
+                        p Online shop
+                        p from 1000$
+                      .service__list-item
+                        p Landing page
+                        p from 7000$
+                      .service__list-item
+                        p Corporate site
+                        p from 5000$
+                      .service__list-item
+                        p Promo site
+                        p from 5000$
+                    .service__button
+                      a.btn(href="#") CONTACT
+                  .service__right
+                    .service__right-circle
+                      img(src="img/logo-circle.svg", alt="")
+                      .service__right-icon-container
+                        .service__right-icon-border
+                          .service__right-icon
+                            .icon.icon--development
+                              +svgMono('development')
+                    .service__progress
+                      p 03
+                        span.line /
+                        span 04
+                      .service__progress-line
+                        span(style="75%")
+
+              .swiper-slide
+                .service__container
+                  .service__left
+                    p.service__left-title ANALIS AND PROMOTION 
+                    p.service__left-desc This is your chance to tell whole planet about your project.
+                    .service__list
+                      .service__list-item
+                        p Full Solution
+                        p from 1000$
+                      .service__list-item
+                        p SMM
+                        p from 7000$
+                      .service__list-item
+                        p SEO
+                        p from 5000$
+                    .service__button
+                      a.btn(href="#") CONTACT
+                  .service__right
+                    .service__right-circle
+                      img(src="img/logo-circle.svg", alt="")
+                      .service__right-icon-container
+                        .service__right-icon
+                          .icon.icon--analis
+                            +svgColor('analis')(style="height: 100px")
+                    .service__progress
+                      p 04
+                        span.line /
+                        span 04
+                      .service__progress-line
+                        span(style="100%")
+                
+            .swiper-pagination

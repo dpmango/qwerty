@@ -9,5 +9,7 @@ PageList:
     ready: 20
   - file: portfolio.html
     ready: 20
+  - file: service.html
+    ready: 20
   - file: page.html
     ready: 0

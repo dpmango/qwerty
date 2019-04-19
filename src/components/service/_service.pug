@@ -3,12 +3,16 @@
 .service
   .fullpage(js-fullpage)
     // fp section
-    .section
+    .section.section--auto
       .section__bg(style="background-image: url(img/bg-contacts.png)")
       .section__title.section__title--portfolio
         p service
       .section__studio
         p 2018 QWERTY STUDIO
+      .section__scroll
+        a(href="#" js-move-down)
+          span
+            .dot
       
       .service__slider
         .container.y-center-flex
@@ -19,6 +23,12 @@
                   .service__left
                     p.service__left-title BRANDING
                     p.service__left-desc Wrapper of your business is one of the most important things
+                    .service__right-circle
+                      img(src="img/logo-circle.svg", alt="")
+                      .service__right-icon-container
+                        .service__right-icon
+                          .icon.icon--branding
+                            +svgColor('branding')
                     .service__list
                       .service__list-item
                         p Branding strategy
@@ -56,6 +66,12 @@
                   .service__left
                     p.service__left-title Design
                     p.service__left-desc Web design, UI / UX design and motion design.
+                    .service__right-circle
+                      img(src="img/logo-circle.svg", alt="")
+                      .service__right-icon-container
+                        .service__right-icon
+                          .icon.icon--design
+                            +svgMono('design')
                     .service__list
                       .service__list-item
                         p Branding strategy
@@ -90,6 +106,13 @@
                   .service__left
                     p.service__left-title DEVELOPMENT
                     p.service__left-desc Let us create the best website in your field of activity
+                    .service__right-circle
+                      img(src="img/logo-circle.svg", alt="")
+                      .service__right-icon-container
+                        .service__right-icon-border
+                          .service__right-icon
+                            .icon.icon--development
+                              +svgMono('development')
                     .service__list
                       .service__list-item
                         p Online shop
@@ -125,6 +148,12 @@
                   .service__left
                     p.service__left-title ANALIS AND PROMOTION 
                     p.service__left-desc This is your chance to tell whole planet about your project.
+                    .service__right-circle
+                      img(src="img/logo-circle.svg", alt="")
+                      .service__right-icon-container
+                        .service__right-icon
+                          .icon.icon--analis
+                            +svgColor('analis')(style="height: 30px")
                     .service__list
                       .service__list-item
                         p Full Solution
@@ -152,3 +181,6 @@
                         span(style="100%")
                 
             .swiper-pagination
+
+      .service__button.service__button--mobile
+        a.btn(href="#") contacts

@@ -100,11 +100,21 @@
         pagination: '.swiper-pagination',
         direction: 'vertical',
         slidesPerView: 1,
-        paginationClickable: true,
-        spaceBetween: 30,
         mousewheelControl: true,
         parallax: true,
         speed: 600,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        breakpoints: {
+          // when window width is <= 992px
+          768: {
+            loop: true,
+            mousewheelControl: false,
+            parallax: false,
+            direction: 'horizontal',
+          },
+        },
       });
 
       //Swiper plugin initialization

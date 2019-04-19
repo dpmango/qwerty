@@ -1,4 +1,5 @@
 .service
+
   .section__title
     z-index: 2
     position: absolute
@@ -14,11 +15,13 @@
 
   .container
     position: relative
-    height: 100vh
+    min-height: calc(100vh - 100px)
+    height: calc(100vh - 100px)
+    padding: 100px 0
 
   .swiper-container
     position: relative
-    z-index: 100
+    z-index: 3
     width: 100%
     height: 100%
 
@@ -27,6 +30,8 @@
     width: 45%
     margin-right: 50px
     text-align: left
+    .service__right-circle
+      display: none
     &-title
       font-family: $tekoFont
       font-weight: 700
@@ -145,11 +150,11 @@
 
 
   &__container
-    max-width: 1000px
+    max-width: 1080px
+    padding: 0 40px
     text-align: center
     width: 100%
     margin: auto
-    padding: 90px 0
     display: flex
     align-items: center
 
@@ -164,13 +169,131 @@
       color: #fff
 
   .swiper-slide
-    height: 100vh
+    // height: 100vh
     background-position: center
     background-repeat: no-repeat
     background-size: cover
     position: relative
     display: flex
     align-items: center
+    overflow: auto
+    width: calc(100% + 20px)
 
   .swiper-pagination
     display: none
+
+
++r($md)
+  .service
+    .swiper-slide
+      height: auto
+    .section--auto
+      height: auto !important
+      padding-top: 130px
+      padding-bottom: 80px
+      align-items: flex-start
+      flex-direction: column
+      justify-content: flex-start
+    .container
+      height: auto !important
+      display: flex
+      align-items: flex-start
+      padding: 0
+    &__container
+      flex-direction: column
+      padding: 0 20px
+      height: 100%
+    &__right
+      display: none
+      &-icon
+        font-size: 55px
+        &-border
+          padding: 12px 17px
+          .service__right-icon
+            font-size: 25px
+        .icon
+          &--development
+            font-size: 25px
+          &--analis
+            color: transparent
+    &__left
+      width: 100%
+      max-width: 100%
+      margin-right: 0
+      box-shadow: 0px 0px 20px rgba(#000, 0.5)
+      padding: 15px
+      text-align: center
+      margin-top: 20px
+      margin-bottom: 20px
+      display: flex
+      flex-direction: column
+      height: 100%
+      .service__right-circle
+        display: block
+        max-width: 200px
+        margin: 25px auto 0
+        img
+          width: 100%
+      &-title
+        font-size: 32px
+        margin-bottom: 10px
+      &-desc
+        font-size: 10px
+        max-width: 100%
+    &__button
+      display: none
+      &--mobile
+        display: block
+        width: 100%
+        text-align: center
+        position: relative
+        z-index: 2
+        .btn
+          margin-top: 35px
+    &__list
+      margin-top: 30px
+      &-item
+        border-top: none
+        border-bottom: 1px solid rgba(255,255,255,0.2)
+      p
+        font-size: 12px
+        padding-top: 15px
+        padding-bottom: 15px
+    &__slider
+      width: 100%
+      top: 0
+
+    .swiper-container
+      padding-bottom: 35px
+
+    .swiper-pagination
+      display: block
+    
+    .swiper-pagination-bullets
+      bottom: 0
+
+    .swiper-pagination-bullet
+      margin: 0 14px
+      width: 14px
+      height: 14px
+      border: 1px solid #fff
+      transition: 0.25s
+      background: transparent
+    
+    .swiper-pagination-bullet-active
+      background: #fff
+    .section__studio
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      bottom: 15px
+      text-align: center
+      z-index: 4
+      display: block
+      p
+        font-family: $robotoFont
+        font-weight: 700
+        color: #fff
+        font-size: 12px
+        line-height: 1
+        letter-spacing: 0.02em

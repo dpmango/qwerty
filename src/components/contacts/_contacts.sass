@@ -1,0 +1,168 @@
+.contacts-page
+
+  .section
+    min-height: 100vh
+    flex-direction: column
+
+  .section__footer
+    position: relative
+    bottom: 0
+    padding-bottom: 30px
+    &-icon
+      max-width: 420px
+      width: 40%
+      height: auto
+      text-align: center
+      margin-right: -55px
+      p
+        font-family: $montseratFont
+        font-weight: 700
+        font-size: 10px
+        line-height: 1.2
+        letter-spacing: 0.03em
+        color: #fff
+        margin: 25px 0 0 0
+        text-transform: none
+
+    .container
+      padding-top: 0
+      align-items: flex-end
+
+  .icon-church
+    color: transparent
+    .ico
+      width: 100%
+      height: auto
+
+  .section__title
+    z-index: 2
+    position: absolute
+    top: 72px
+    left: 50%
+    transform: translateX(-50%)
+    p
+      margin: 0
+      color: #c6c6c6
+
+  .container
+    padding-top: 220px
+    position: relative
+    z-index: 2
+    text-align: center
+
+  &__container
+    max-width: 650px
+    margin: 0 auto 70px
+    position: relative
+    padding: 0 60px
+    z-index: 5
+
+    &:before
+      position: absolute
+      width: 1px
+      height: 100%
+      background: transparent
+      content: ''
+      display: block
+      box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.5)
+      left: -20px
+      top: 0
+
+    &:after
+      position: absolute
+      width: 1px
+      height: 100%
+      background: transparent
+      content: ''
+      display: block
+      box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.5)
+      right: -20px
+      top: 0
+
+  &__info
+    position: absolute
+    bottom: -18px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    left: 0
+
+    &-item
+      padding: 25px 50px
+      position: relative
+
+      &:nth-child(1)
+        &:before
+          position: absolute
+          display: block
+          content: ''
+          width: 1px
+          height: 100%
+          background: transparent
+          box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.8)
+          left: 0
+          top: 0
+
+      &:nth-child(2)
+        &:before
+          position: absolute
+          display: block
+          content: ''
+          width: 1px
+          height: 100%
+          background: transparent
+          box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.8)
+          right: 0
+          top: 0
+        
+
+    a
+      font-family: $robotoFont
+      font-weight: 700
+      font-size: 14px
+      line-height: 1
+      letter-spacing: 0.1em
+      color: #fff  
+
++r($md)
+  .contacts-page
+
+    .container
+      padding-top: 145px
+
+    .section__footer
+      margin-top: 10px
+      &-icon
+        margin-bottom: 20px
+        max-width: 65%
+        width: 100%
+        margin-right: 0
+
+      .ico
+        max-height: 100px
+
+      .container
+        align-items: center
+        .mobile-navi__socials
+          margin: 20px 0
+
+    &__container
+      padding: 0
+      margin-bottom: 0px
+
+      &:before
+        display: none
+
+      &:after
+        display: none
+
+    &__shadow
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4)
+      margin: 0 auto
+      width: 100%
+      padding: 10px 20px 20px
+      h2
+        color: #fff
+    &__info
+      display: none

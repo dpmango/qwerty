@@ -15,5 +15,7 @@ PageList:
     ready: 20
   - file: blog-page.html
     ready: 20
+  - file: contacts.html
+    ready: 20
   - file: page.html
     ready: 0

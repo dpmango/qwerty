@@ -1,0 +1,64 @@
+
+// contacts-page
+.contacts-page
+  .fullpage
+    // fp section
+    .section.section--auto
+      .section__bg(style="background-image: url(img/bg-service.png)")
+      .section__title.section__title--portfolio
+        p CONTACTS
+      .container
+
+        .contacts-page__container
+          form.js-form-homepage(action="#")
+            .contacts-page__shadow
+              h2 JUST LEAVE REQUEST, AND OUR REPRESENTATIVE WILL IMMEDIATELY CONTACT YOU
+              .input-container(js-input-focus)
+                label.input-container__floating-label Name
+                input(type="text" name="name" placeholder="" autocomplete="off")
+              .input-container(js-input-focus)
+                label.input-container__floating-label Phone
+                input(type="text" name="phone" placeholder="" autocomplete="off")
+              .input-container(js-input-focus)
+                label.input-container__floating-label Email
+                input(type="text" name="email" placeholder="" autocomplete="off")
+              .input-container(js-input-focus)
+                select
+                  option(value="val0" selected disabled) service
+                  option(value="val1") service 1
+                  option(value="val2") service 2
+                  option(value="val3") service long row
+              .input-container.input-container--textarea(js-input-focus)
+                span
+                span
+                label.input-container__floating-label Message
+                textarea(name="message" rows="3" data-limit-rows="true" autocomplete="off")
+                //- .input-container__text
+            .contacts__success
+              input.btn(type="submit" value="send")
+              p Thank you. Your request has been received and we will get back to you shortly.
+                br
+                | You are amazing!
+        .contacts-page__info
+          .contacts-page__info-item
+            a(href="#") HELLO@QWERTY.AGENCY
+          .contacts-page__info-item
+            a(href="#") +995 591 051 591
+      .section__footer
+        .container
+          .section__footer-left
+            p 2019 QWERTY CO LLC
+          .section__footer-icon
+            .icon-church
+              +svgColor('church')
+            p  «Based in Tbilisi, Georgia»
+          .section__footer-right
+            .mobile-navi__socials
+              a.mobile-navi__icon.mobile-navi__icon--dribble(href="https://dribbble.com/Qwerty-co" target="_blank")
+                +svgMono('dribble')
+              a.mobile-navi__icon.mobile-navi__icon--behance(href="http://www.behance.net/qwertyagency" target="_blank")
+                +svgColor('behance-new')
+              a.mobile-navi__icon.mobile-navi__icon--instagram(href="https://instagram.com/qwerty.agency" target="_blank")
+                +svgMono('instagram')
+              a.mobile-navi__icon.mobile-navi__icon--facebook(href="https://www.facebook.com/qwerty.co.llc/" target="_blank")
+                +svgColor('facebook-new')

@@ -13,5 +13,7 @@ PageList:
     ready: 20
   - file: blog.html
     ready: 20
+  - file: blog-page.html
+    ready: 20
   - file: page.html
     ready: 0

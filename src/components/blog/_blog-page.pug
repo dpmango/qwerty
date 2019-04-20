@@ -1,5 +1,5 @@
 
-// blog
+// blog-page
 .blog
   .fullpage
     // fp section
@@ -10,12 +10,12 @@
       .container
         .blog__grid
           .blog__content
-            .blog__item
+            .blog__item.blog__item--page
               .blog__image(style="background-image: url(img/blog-1.jpg)")
                 .blog__info-container
                   p.blog__title WHAT YOU NEED TO KNOW THE COPYRAYTER ON THE PROMOTION OF SITES
                   p.blog__description E-mail marketing
-              .blog__info
+              .blog__info.blog__info--page
                 .blog__share
                   .blog__share-item
                     .blog__share-icon
@@ -27,25 +27,32 @@
                     p Share
                 p.blog__info-title When I took the first steps in copywriting
                 p.blog__info-main ...the main order was on "sheets" - very long articles, stuffed to the eyeball string with key phrases. Then it worked, but today search engines have learned to understand the meaning of the text and take into account how visitors behave on sites. You might think that the key phrases in the promotion of sites are no longer needed. Is that so? I am sure that you know what SEO is and you have the appropriate terminology, but I’ll give you a  vfew definitions. Solely to ensure that by the same term we understand the same thing.
-                a.btn.btn--empty(href="#") READ MORE
-            .blog__item
-              .blog__image(style="background-image: url(img/blog-2.jpg)")
-                .blog__info-container
-                  p.blog__title 7 TRENDS OF EMAIL MARKETING 2018
-                  p.blog__description Internet marketing
-              .blog__info
-                .blog__share
-                  .blog__share-item
-                    .blog__share-icon
-                      +svgColor('time')
-                    p 25.12.2018
-                  a.blog__share-item(href="#")
-                    .blog__share-icon
-                      +svgColor('share')
-                    p Share
-                p.blog__info-title Email marketing always remains in the top three digital marketing tools
-                p.blog__info-main With it, most companies increase their budget. It is necessary to study the current trends of email newsletters, as the level of competition and the im- portance of email marketing for mobile devices is growing. Despite the fact that email competes with organic and paid search in e-commerce, it provides higher sales than social networks or display advertising.
-                a.btn.btn--empty(href="#") READ MORE
+                p.blog__info-title How the search engine works
+                p.blog__info-main In a very strong approximation, it looks like this: the search engine scans the text of the page and remembers it, when you enter a search query into the search engine, it matches the words from the query with the text of all pages available in the database, the search engine determines how accura- tely each of all pages responds to your request, and produces a sorted list of pages. The words from your request are called key, or, for simplicity, keys. If they are contained in the text of the article, it means that it responds to your request. Hence the conclusion: no matter how “wiser” the search engine al- gorithm is, if the text does not contain the corresponding words, it will not be able to “understand” what your article is about, which means it will not show it in response to the user's request. So forget about the key words and phrases are a bit early. I foresee an obvious question: where and how many keys should I use? That's what I want to tell you.
+                p.blog__info-title The main mistake in the spelling of SEO-text
+                p.blog__info-main Work on the promotion of the site begins with the receipt of TK, usually  containing a list of key phrases. What does a copywriter usually do when starting work? He looks at the keys, roughly represents what the text is about, and begins to write. The result is a stream of consciousness on the topic of keywords. In such a text there is no structure, no wholeness, but the main thing - there is no idea.
+                p.blog__info-main Need to start differently. TK gives you only a general theme of the text, sets the direction. Then you need to move on your own.
+                p.blog__info-main Study the material, read already written to you, understand what new you can say on this topic. Then determine the structure and way of narration. If you are writing in a news format, adhere to the principle of an inverted pyramid; use a three-stroke structure for storytelling.
+                p.blog__info-main Most importantly, you must understand the goal. Answer yourself the question: what do you want to say with this text. Then everything else will be easier to build.
+                p.blog__info-main And further. Even if you have a boring topic, write interesting. We have already told you how to do this.
+                p.blog__info-main Now I will talk directly about where and how to use keywords when promoting websites. Please note that I’m talking more about the case when you write the text yourself, and not under the guidance of the optimizer, a good SEO specialist will tell you himself where and how many keys he needs.
+                .blog__comment
+                  p.blog__comment-title LEAVE A COMMENT
+                  form(action="#")
+                    .blog__comment-input
+                      textarea(placeholder="Write a comment")
+                    .blog__comment-input
+                      input(type="text" placeholder="Name")
+                    .blog__comment-input
+                      input(type="text" placeholder="Email")
+                    input.btn(type="submit", value="COMMENT")
+            .blog__buttons
+              .blog__buttons-item
+                a(href="#") PREVIOUS ARTICLE
+                p Main ways to promote on YouTube - what and how to do
+              .blog__buttons-item
+                a(href="#") NEXT ARTICLE
+                p 7 Trends of email marketing
 
           .blog__sidebar
             .blog__sidebar-item

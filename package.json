@@ -9,6 +9,11 @@
     "surge": "surge --project ./dist --domain qwerty-studio.surge.sh",
     "deploy": "gulp build --production && surge --project ./dist --domain qwerty-studio.surge.sh"
   },
+  "git": {
+    "scripts": {
+      "pre-push": "surge --project ./dist --domain qwerty-studio.surge.sh"
+    }
+  },
   "author": "Sergey Khmelevskoy <sergey@khmelevskoy.co>",
   "license": "ISC",
   "dependencies": {

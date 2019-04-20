@@ -1,0 +1,114 @@
+
+// blog
+.blog
+  .fullpage
+    // fp section
+    .section.section--auto
+      .section__bg(style="background-image: url(img/bg-contacts.png)")
+      .section__title.section__title--portfolio
+        p blog
+      .container
+        .blog__grid
+          .blog__content
+            .blog__item
+              .blog__image(style="background-image: url(img/blog-1.jpg)")
+                .blog__info-container
+                  p.blog__title WHAT YOU NEED TO KNOW THE COPYRAYTER ON THE PROMOTION OF SITES
+                  p.blog__description E-mail marketing
+              .blog__info
+                .blog__share
+                  .blog__share-item
+                    .blog__share-icon
+                      +svgColor('time')
+                    p 25.12.2018
+                  a.blog__share-item(href="#")
+                    .blog__share-icon
+                      +svgColor('share')
+                    p Share
+                p.blog__info-title When I took the first steps in copywriting
+                p.blog__info-main ...the main order was on "sheets" - very long articles, stuffed to the eyeball string with key phrases. Then it worked, but today search engines have learned to understand the meaning of the text and take into account how visitors behave on sites. You might think that the key phrases in the promotion of sites are no longer needed. Is that so? I am sure that you know what SEO is and you have the appropriate terminology, but I’ll give you a  vfew definitions. Solely to ensure that by the same term we understand the same thing.
+                a.btn.btn--empty(href="#") READ MORE
+            .blog__item
+              .blog__image(style="background-image: url(img/blog-2.jpg)")
+                .blog__info-container
+                  p.blog__title 7 TRENDS OF EMAIL MARKETING 2018
+                  p.blog__description Internet marketing
+              .blog__info
+                .blog__share
+                  .blog__share-item
+                    .blog__share-icon
+                      +svgColor('time')
+                    p 25.12.2018
+                  a.blog__share-item(href="#")
+                    .blog__share-icon
+                      +svgColor('share')
+                    p Share
+                p.blog__info-title Email marketing always remains in the top three digital marketing tools
+                p.blog__info-main With it, most companies increase their budget. It is necessary to study the current trends of email newsletters, as the level of competition and the im- portance of email marketing for mobile devices is growing. Despite the fact that email competes with organic and paid search in e-commerce, it provides higher sales than social networks or display advertising.
+                a.btn.btn--empty(href="#") READ MORE
+
+          .blog__sidebar
+            .blog__sidebar-item
+              p.blog__sidebar-title Search
+              form(action="#")
+                .blog__sidebar-form
+                  .blog__sidebar-input
+                    input(type="text" placeholder="Enter text...")
+                  .blog__sidebar-button
+                    input.button(type="submit" style="background-image: url(img/search.svg)")
+
+            .blog__sidebar-item
+              p.blog__sidebar-title Last publication
+              p.blog__sidebar-info What you need to know the copyrayter on the promotion of sites
+            .blog__sidebar-item
+              p.blog__sidebar-title Categories
+              .blog__sidebar-list
+                a.blog__sidebar-link(href="#") E-mail marketing
+                a.blog__sidebar-link(href="#") Assortment matrix
+                a.blog__sidebar-link(href="#") Negotiating
+                a.blog__sidebar-link(href="#") Sales funnel
+                a.blog__sidebar-link(href="#") Internet marketing
+                a.blog__sidebar-link(href="#") Marketing technology
+                a.blog__sidebar-link(href="#") Multi-step sales
+                a.blog__sidebar-link(href="#") Selling deportment
+                a.blog__sidebar-link(href="#") Celection of personnel
+                a.blog__sidebar-link(href="#") Psychology of sales
+            .blog__sidebar-item
+              p.blog__sidebar-title Our Service
+              .blog__sidebar-service
+                .blog__sidebar-service-item
+                  .blog__sidebar-service-image
+                    .service__icon-container
+                      .service__icon
+                        +svgMono('design')
+                  p.blog__sidebar-service-title Design
+                .blog__sidebar-service-item
+                  .blog__sidebar-service-image
+                    .service__icon-container
+                      .service__icon-border
+                        .service__icon
+                          +svgMono('development')
+                  p.blog__sidebar-service-title Development
+                .blog__sidebar-service-item
+                  .blog__sidebar-service-image
+                    .service__icon-container
+                      .service__icon.service__icon--analis
+                        +svgColor('analis')
+                  p.blog__sidebar-service-title Analis and Promotion
+                .blog__sidebar-service-item
+                  .blog__sidebar-service-image
+                    .service__icon-container
+                      .service__icon
+                        +svgColor('branding')
+                  p.blog__sidebar-service-title Branding
+            .blog__sidebar-item
+              p.blog__sidebar-title We are in social
+              .blog__sidebar-socials
+                a.blog__sidebar-icon(href="https://dribbble.com/Qwerty-co" target="_blank")
+                  +svgMono('dribble')
+                a.blog__sidebar-icon(href="http://www.behance.net/qwertyagency" target="_blank")
+                  +svgColor('behance-new')
+                a.blog__sidebar-icon(href="https://instagram.com/qwerty.agency" target="_blank")
+                  +svgMono('instagram')
+                a.blog__sidebar-icon(href="https://www.facebook.com/qwerty.co.llc/" target="_blank")
+                  +svgColor('facebook-new')

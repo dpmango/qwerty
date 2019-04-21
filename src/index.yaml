@@ -17,5 +17,5 @@ PageList:
     ready: 20
   - file: contacts.html
     ready: 20
-  - file: page.html
-    ready: 0
+  - file: vacancies.html
+    ready: 20

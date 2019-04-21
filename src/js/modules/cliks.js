@@ -53,6 +53,11 @@
           $('.contacts-page__container').addClass('is-active');
         })
 
+        .on('click', '[js-open-vacancy]', function() {
+          $('.vacancies__main').fadeOut();
+          $('.vacancies__about').fadeIn();
+        })
+
         // scroll to section
         .on('click', 'a[href^="#section"]', function() {
           // section scroll

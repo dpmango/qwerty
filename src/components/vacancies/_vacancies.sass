@@ -1,0 +1,145 @@
+.vacancies
+
+  .section
+    min-height: 100vh
+
+  .section__bg
+    background-position: top center
+
+  .container
+    padding-top: 220px
+    position: relative
+    z-index: 2
+
+  .section__title
+    z-index: 2
+    position: absolute
+    top: 72px
+    left: 50%
+    transform: translateX(-50%)
+    p
+      margin: 0
+      color: #c6c6c6
+
+  .section__footer
+    .container
+      padding-top: 0
+      align-items: flex-end
+
+  &__grid
+    display: flex
+    align-items: stretch
+    justify-content: space-between
+    padding-bottom: 150px
+
+  &__content
+    max-width: 530px
+    width: 48%
+
+  &__main
+    display: block
+    &.is-hidden
+      display: none
+  &__about
+    display: none
+    &.is-active
+      display: block
+
+  &__right
+    max-width: 530px
+    width: 48%
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3)
+    text-align: center
+
+    &-form
+      padding: 111px 40px 50px
+
+    &-about
+      padding: 50px 40px
+
+    h2
+      display: block
+      font-family: $tekoFont
+      font-weight: 700
+      font-size: 20px;
+      line-height: 1.3
+      letter-spacing: 0.1em
+      color: #fff
+      margin-bottom: 10px
+
+    &-item
+      margin-bottom: 90px
+
+    &-title
+      font-family: $tekoFont
+      font-weight: 600
+      font-size: 20px
+      line-height: 1.5
+      letter-spacing: 0.1em
+      color: #fff
+      margin: 0 0 30px 0
+
+    &-info
+      font-family: $montseratFont
+      font-size: 14px
+      line-height: 1.7
+      letter-spacing: 0.03em
+      color: #C6C6C6
+      margin-bottom: 17px
+      
+    
+
+  .contacts__success
+    text-align: center
+
+  &__item
+    width: 100%
+    padding: 30px 30px 40px
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3)
+    margin-bottom: 35px
+
+    &:last-child
+      margin-bottom: 0
+
+    .btn
+      margin-top: 40px
+
+  &__image
+    font-size: 0
+    img
+      height: 77px
+      width: auto
+  
+  &__title
+    font-family: $tekoFont
+    font-weight: 600
+    font-size: 20px
+    line-height: 1.4
+    letter-spacing: 0.1em
+    color: #fff
+    margin: 20px 0
+
+  &__info
+    font-family: $montseratFont
+    font-size: 14px
+    line-height: 1.5
+    letter-spacing: 0.03em
+    color: #C6C6C6
+    margin: 0
+
++r($md)
+
+  .vacancies
+
+    .section
+      flex-direction: column
+      justify-content: center
+
+    .container
+      padding-top: 145px
+
+    .section__footer
+      margin-top: auto
+      .container
+        padding: 10px 0 30px
+        align-items: center

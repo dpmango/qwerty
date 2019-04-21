@@ -1,0 +1,100 @@
+
+// vacancies
+.vacancies
+  .fullpage
+    // fp section
+    .section.section--auto
+      .section__bg(style="background-image: url(img/bg-vacancies.png)")
+      .section__title.section__title--portfolio
+        p vacancies
+      .container
+        .vacancies__main
+          .vacancies__grid
+            .vacancies__content
+              .vacancies__slider
+                .vacancies__item
+                  .vacancies__image
+                    img(src="img/vacancies-1.png", alt="")
+                  p.vacancies__title PR manager
+                  p.vacancies__info We need an energetic person with ambitions, able to strengthen the PR department of the agency, to become a confident guide, to achieve results through powerful promotion channels. 
+                  p.vacancies__info We are interested in talent and innovative thinking. The specialist must be flexible in the choice of approaches and methods for solving problems. It is not acceptable to limit only the standard set of actions.
+                  a.btn.btn--empty(href="#" js-open-vacancy) READ MORE
+                .vacancies__item
+                  .vacancies__image
+                    img(src="img/vacancies-2.png", alt="")
+                  p.vacancies__title Designer
+                  p.vacancies__info We need a designer for working customer support. We need a collected and attentive candidate, ready to fulfill a large volume of orders in a short time.
+                  a.btn.btn--empty(href="#" js-open-vacancy) READ MORE
+                .vacancies__item
+                  .vacancies__image
+                    img(src="img/vacancies-3.png", alt="")
+                  p.vacancies__title Unknown
+                  p.vacancies__info You have not found a suitable vacancy, but still want to create the future with us? If you are experienced enough in one of the areas in which our company specializes, you have a portfolio and you are a fan of the digital world, fill out the feedback form and you will at least make a new acquaintance
+
+            .vacancies__right
+              .vacancies__right-form
+                form.js-form-homepage(action="#")
+                  .contacts__shadow
+                    h2 BECOME PART OF THE TEAM
+                    .input-container(js-input-focus)
+                      label.input-container__floating-label Name
+                      input(type="text" name="name" placeholder="" autocomplete="off")
+                    .input-container(js-input-focus)
+                      label.input-container__floating-label Phone
+                      input(type="text" name="phone" placeholder="" autocomplete="off")
+                    .input-container(js-input-focus)
+                      label.input-container__floating-label Email
+                      input(type="text" name="email" placeholder="" autocomplete="off")
+                    //- .input-container(js-input-focus)
+                    //-   label.input-container__floating-label LINK TO PORTFOLIO OR DOWNLOAD THE FILE
+                    //-   input(type="file" placeholder="" autocomplete="off")
+                    .input-container.input-container--textarea(js-input-focus)
+                      span
+                      span
+                      label.input-container__floating-label Message
+                      textarea(name="message" rows="3" data-limit-rows="true" autocomplete="off")
+                      //- .input-container__text
+                  .contacts__success
+                    input.btn(type="submit" value="send")
+                    p Thank you. Your request has been received and we will get back to you shortly.
+                      br
+                      | You are amazing!
+        .vacancies__about
+          .vacancies__grid
+            .vacancies__content
+            .vacancies__right
+              .vacancies__right-about
+                .vacancies__right-item
+                  p.vacancies__right-title The duties of the employee include
+                  p.vacancies__right-info • interaction with the art director and the development of the concept of design on digital media;
+                  p.vacancies__right-info • development of design layouts for landing pages and banners, creating key visuals;
+                  p.vacancies__right-info • responsibility for the design systems of the main customers;
+                  p.vacancies__right-info • participation in the preparation of promotional sites and landing pages.
+                .vacancies__right-item
+                  p.vacancies__right-title The specialist must be
+                  p.vacancies__right-info • concentrated;
+                  p.vacancies__right-info • able to handle with routine work;
+                  p.vacancies__right-info • knowing the basic concepts of graphics processing in Adobe (Photoshop and Illustrator).
+                .vacancies__right-item
+                  p.vacancies__right-title Preference is given to who
+                  p.vacancies__right-info • can form design concepts;
+                  p.vacancies__right-info • can create simple animations in AE.
+                .vacancies__right-item
+                  p.vacancies__right-title Conditions:
+                  p.vacancies__right-info • cooperation in the team of one of the best Georgian agencies;
+                  p.vacancies__right-info • participation in large and unusual projects;
+                  p.vacancies__right-info • decent pay.
+      .section__footer
+        .container
+          .section__footer-left
+            p 2019 QWERTY CO LLC
+          .section__footer-right
+            .mobile-navi__socials
+              a.mobile-navi__icon.mobile-navi__icon--dribble(href="https://dribbble.com/Qwerty-co" target="_blank")
+                +svgMono('dribble')
+              a.mobile-navi__icon.mobile-navi__icon--behance(href="http://www.behance.net/qwertyagency" target="_blank")
+                +svgColor('behance-new')
+              a.mobile-navi__icon.mobile-navi__icon--instagram(href="https://instagram.com/qwerty.agency" target="_blank")
+                +svgMono('instagram')
+              a.mobile-navi__icon.mobile-navi__icon--facebook(href="https://www.facebook.com/qwerty.co.llc/" target="_blank")
+                +svgColor('facebook-new')

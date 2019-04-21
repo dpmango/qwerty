@@ -45,14 +45,40 @@
               a.is-active(href="#" js-open-logo) logo
               span /
               a(href="#" js-open-logo-text) logo text
-            .portfolio__logotypes-container
-              .portfolio__logotypes-image.p-logo.is-active
-                img(src="img/lion-logo.png", alt="")
-              .portfolio__logotypes-image.p-logo-text
-                .icon
-                  +svgColor('thrillstore')
-          .portfolio__colors
-            img(src="img/colors.png", alt="")
+            .logotypes-logo.logo.is-active
+              .swiper-container(js-portfolio-item-slider)
+                .swiper-wrapper
+                  .swiper-slide
+                    .portfolio__logotypes-container
+                      .portfolio__logotypes-image
+                        img(src="img/lion-logo.png", alt="")
+                  .swiper-slide
+                    .portfolio__logotypes-container
+                      .portfolio__logotypes-image
+                        img(src="img/lion-logo.png", alt="" style="transform: scale(1, -1)")
+                .portfolio__controls-container
+                  .portfolio__controls
+                    .swiper-pagination
+                    .swiper-button-next
+                    .swiper-button-prev
+            .logotypes-logo.logo-text
+              .swiper-container(js-portfolio-item-slider)
+                .swiper-wrapper
+                  .swiper-slide
+                    .portfolio__logotypes-container
+                      .portfolio__logotypes-image.p-logo-text
+                        .icon
+                          +svgColor('thrillstore')
+                  .swiper-slide
+                    .portfolio__logotypes-container
+                      .portfolio__logotypes-image.p-logo-text(style="transform: scale(1, -1)")
+                        .icon
+                          +svgColor('thrillstore')
+                .portfolio__controls-container
+                  .portfolio__controls
+                    .swiper-pagination
+                    .swiper-button-next
+                    .swiper-button-prev
     // fp section
     .section.section--auto
       .section__bg(style="background-color: #fff")
@@ -66,14 +92,32 @@
                 .line
                 p.after WEB USABILITY
               p.portfolio__description We conducted a usability test, identified errors and completely got rid of them. Now the web site interface is convenient for better user orientation and quick transition between web site pages.
-          .portfolio__images
-            .portfolio__images-left
-              img(src="img/screen-1.jpg", alt="")
-              img(src="img/screen-2.jpg", alt="")
-            .portfolio__images-right
-              img(src="img/screen-3.jpg", alt="")
-          .portfolio__buttons
-            img(src="img/buttons.png", alt="")
+          .portfolio__items-slider
+            .swiper-container(js-portfolio-item-slider)
+              .swiper-wrapper
+                .swiper-slide
+                  .portfolio__images
+                    .portfolio__images-left
+                      img(src="img/screen-1.jpg", alt="")
+                      img(src="img/screen-2.jpg", alt="")
+                    .portfolio__images-right
+                      img(src="img/screen-3.jpg", alt="")
+                  //- .portfolio__buttons
+                  //-   img(src="img/buttons.png", alt="")
+                .swiper-slide
+                  .portfolio__images
+                    .portfolio__images-left
+                      img(src="img/screen-2.jpg", alt="")
+                      img(src="img/screen-1.jpg", alt="")
+                    .portfolio__images-right
+                      img(src="img/screen-3.jpg", alt="")
+                  //- .portfolio__buttons
+                  //-   img(src="img/buttons.png", alt="")
+              .portfolio__controls-container
+                .portfolio__controls
+                  .swiper-pagination
+                  .swiper-button-next
+                  .swiper-button-prev
     // fp section
     .section.section--result
       .section__bg(style="background-color: #000")

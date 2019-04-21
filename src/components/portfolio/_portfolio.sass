@@ -183,6 +183,8 @@
     max-width: 1000px
     display: flex
     margin-top: 60px
+    margin-bottom: 40px
+    justify-content: center
     &-left
       margin-right: 30px
       width: 69%
@@ -211,6 +213,20 @@
     img
       width: 120px
       margin: 0 auto
+
+  .logotypes-logo
+    opacity: 0
+    pointer-events: none
+    transition: opacity 0.25s ease-in-out
+    z-index: -1
+    height: 0
+    overflow: hidden
+    &.is-active
+      transform: translateX(0)
+      pointer-events: all
+      z-index: 2
+      opacity: 1
+      height: auto
 
   &__logotypes
     margin-top: 65px
@@ -247,19 +263,82 @@
       flex-direction: column
       justify-content: center
       margin: 15px auto 0
+      position: relative
+
+      .swiper-container
+        width: 100%
+
+    .portfolio__controls-container
+      margin-top: 35px
+
     &-image
       position: relative
       width: 100%
       height: 100%
-      display: none
-      &.is-active
-        display: block
 
       img
         max-height: 220px
-      .icon
 
+      .icon
         color: #000
+  
+  &__controls-container
+    display: flex
+    justify-content: center
+
+  &__controls
+    position: relative
+    z-index: 3
+    display: flex
+    padding: 6px 40px
+    margin: 0 auto
+    width: auto
+    background: $colorOrange
+    min-height: 36px
+
+    .swiper-button-next
+      position: absolute
+      width: 13px
+      height: 13px
+      border: 1px solid #fff
+      right: 20px
+      top: 50%
+      transform: translateY(-50%) rotate(45deg)
+      border-left: none
+      border-bottom: none
+      margin-top: 0
+      background: none
+
+    .swiper-button-prev
+      position: absolute
+      width: 13px
+      height: 13px
+      border: 1px solid #fff
+      left: 20px
+      right: auto
+      top: 50%
+      transform: translateY(-50%) rotate(45deg)
+      border-right: none
+      border-top: none
+      margin-top: 0
+      background: none
+
+    .swiper-pagination
+      display: flex
+      align-items: center
+      justify-content: center
+      position: relative
+
+    .swiper-pagination-bullet
+      width: 10px
+      height: 10px
+      background: none
+      border: 1px solid #fff
+      border-radius: 50%
+      margin: 6px
+      transition: 0.25s
+      &-active
+        background: #fff
 
 
   
@@ -281,6 +360,7 @@
       margin: 60px 0
       &--result
         margin: 45px 0
+        width: 100%
 
     &__title
       font-family: $tekoFont
@@ -307,6 +387,11 @@
         margin-top: 15px
         font-size: 14px
 
+    &__items-slider
+      max-width: calc(100% + 40px)
+      width: calc(100% + 40px)
+      margin: 0 -20px
+
     &__item-number
       width: 95px
       height: 95px
@@ -323,7 +408,9 @@
     &__images
       flex-wrap: wrap
       margin-top: 30px
+      margin-bottom: 30px
       justify-content: center
+      padding: 0 20px
       &-left
         margin-right: 0
         width: 100%

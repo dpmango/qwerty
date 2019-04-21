@@ -117,6 +117,22 @@
         },
       });
 
+      var swiper3 = new Swiper('[js-portfolio-item-slider]', {
+        loop: false,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: false,
+        // autoplay: {
+        //   delay: 10000,
+        //   disableOnInteraction: false,
+        // },
+      });
+
       //Swiper plugin initialization
       initSwiper();
 

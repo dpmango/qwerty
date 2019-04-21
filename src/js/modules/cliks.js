@@ -36,16 +36,16 @@
         .on('click', '[js-open-logo]', function() {
           $('.portfolio__logotypes-buttons a').removeClass('is-active');
           $(this).addClass('is-active');
-          $('.portfolio__logotypes-image').removeClass('is-active');
-          $('.portfolio__logotypes-image.p-logo').addClass('is-active');
+          $('.logotypes-logo').removeClass('is-active');
+          $('.logotypes-logo.logo').addClass('is-active');
         })
 
         // open logo-text portfolio page
         .on('click', '[js-open-logo-text]', function() {
           $('.portfolio__logotypes-buttons a').removeClass('is-active');
           $(this).addClass('is-active');
-          $('.portfolio__logotypes-image').removeClass('is-active');
-          $('.portfolio__logotypes-image.p-logo-text').addClass('is-active');
+          $('.logotypes-logo').removeClass('is-active');
+          $('.logotypes-logo.logo-text').addClass('is-active');
         })
 
         // scroll to section

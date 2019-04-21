@@ -41,9 +41,17 @@
                 | You are amazing!
         .contacts-page__info
           .contacts-page__info-item
-            a(href="#") HELLO@QWERTY.AGENCY
+            a(href="#") 
+              .icon
+                +svgColor('mail')
+              | HELLO@QWERTY.AGENCY
           .contacts-page__info-item
-            a(href="#") +995 591 051 591
+            a(href="#") 
+              .icon
+                +svgColor('phone-orange')
+              | +995 591 051 591
+          .contacts-page__info-button
+            a.btn(href="#" js-open-form) SEND REQUEST
       .section__footer
         .container
           .section__footer-left

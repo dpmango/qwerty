@@ -48,6 +48,11 @@
           $('.logotypes-logo.logo-text').addClass('is-active');
         })
 
+        .on('click', '[js-open-form]', function() {
+          $('.contacts-page__info').addClass('closed');
+          $('.contacts-page__container').addClass('is-active');
+        })
+
         // scroll to section
         .on('click', 'a[href^="#section"]', function() {
           // section scroll

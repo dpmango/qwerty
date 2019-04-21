@@ -88,6 +88,9 @@
     width: 100%
     left: 0
 
+    &-button
+      display: none
+
     &-item
       padding: 25px 50px
       position: relative
@@ -124,6 +127,8 @@
       line-height: 1
       letter-spacing: 0.1em
       color: #fff  
+      .icon
+        display: none
 
 +r($md)
   .contacts-page
@@ -132,7 +137,8 @@
       padding-top: 145px
 
     .section__footer
-      margin-top: 10px
+      margin-top: auto
+      padding-top: 10px
       &-icon
         margin-bottom: 20px
         max-width: 65%
@@ -150,6 +156,9 @@
     &__container
       padding: 0
       margin-bottom: 0px
+      display: none
+      &.is-active
+        display: block
 
       &:before
         display: none
@@ -165,4 +174,27 @@
       h2
         color: #fff
     &__info
-      display: none
+      display: flex
+      position: relative
+      bottom: 0
+      flex-direction: column-reverse
+      &.closed
+        display: none
+      &-item
+        padding: 0
+        margin-bottom: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+        a
+          .icon
+            display: block
+            font-size: 26px
+            color: #fff
+            margin-bottom: 10px
+      &-button
+        display: block
+        margin-bottom: 50px
+        order: -2
+        .btn
+          margin-top: 25px

@@ -48,14 +48,37 @@
           $('.logotypes-logo.logo-text').addClass('is-active');
         })
 
+        // open request form contacts page
         .on('click', '[js-open-form]', function() {
           $('.contacts-page__info').addClass('closed');
           $('.contacts-page__container').addClass('is-active');
         })
 
+        // open vacancies info vacancies page
         .on('click', '[js-open-vacancy]', function() {
           $('.vacancies__main').fadeOut();
           $('.vacancies__about').fadeIn();
+        })
+
+        // close vacancies info vacancies page
+        .on('click', '[js-close-vacancy]', function() {
+          $('.vacancies__about').fadeOut();
+          $('.vacancies__main').fadeIn();
+        })
+
+        // open request form vacancies page
+        .on('click', '[js-open-request]', function() {
+          $('.vacancies__content').fadeOut();
+          $('.vacancies__about').fadeOut();
+          $('.vacancies__main').css('display', 'block');
+          $('.vacancies__main .vacancies__right').fadeIn();
+        })
+
+        // toggler vacancies info right side mobile resolution
+        .on('click', '.vacancies__right-title', function() {
+          $(this)
+            .parent()
+            .toggleClass('is-open');
         })
 
         // scroll to section

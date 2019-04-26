@@ -2,20 +2,20 @@ ProjectTitle: Qwerty
 
 PageList:
   - file: homepage.html
-    ready: 90
+    ready: 1000
   - file: about.html
-    ready: 20
+    ready: 90
   - file: portfolio-first.html
-    ready: 20
+    ready: 90
   - file: portfolio.html
-    ready: 20
+    ready: 90
   - file: service.html
-    ready: 20
+    ready: 90
   - file: blog.html
-    ready: 20
+    ready: 90
   - file: blog-page.html
-    ready: 20
+    ready: 90
   - file: contacts.html
-    ready: 20
+    ready: 90
   - file: vacancies.html
-    ready: 20
+    ready: 90

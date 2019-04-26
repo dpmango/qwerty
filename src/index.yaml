@@ -2,7 +2,7 @@ ProjectTitle: Qwerty
 
 PageList:
   - file: homepage.html
-    ready: 1000
+    ready: 100
   - file: about.html
     ready: 90
   - file: portfolio-first.html

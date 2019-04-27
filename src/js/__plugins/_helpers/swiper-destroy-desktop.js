@@ -11,7 +11,7 @@ function initSliders() {
   var aboutSelector = '[js-mobile-slider]';
 
   if ($(aboutSelector).length > 0) {
-    if (_window.width() >= aboutSwiper.disableOn) {
+    if (window.innerWidth >= aboutSwiper.disableOn) {
       if (aboutSwiper.instance !== undefined) {
         aboutSwiper.instance.destroy(true, true);
         aboutSwiper.instance = undefined;

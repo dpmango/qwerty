@@ -21,7 +21,7 @@
         // https://github.com/alvarotrigo/fullpage.js
       };
 
-      if (_window.width() >= 768) {
+      if (window.innerWidth >= 768) {
         if (!$('html').hasClass('fp-enabled')) {
           $fullpage.fullpage(fpOptions);
         }

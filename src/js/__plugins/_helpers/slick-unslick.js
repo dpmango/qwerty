@@ -31,7 +31,7 @@ var socialsSlickMobileOptions = {
 _socialsSlickMobile.slick(socialsSlickMobileOptions);
 
 _window.on('resize', debounce(function(e){
-  if ( _window.width() > 992 ) {
+  if ( window.innerWidth > 992 ) {
     if (_socialsSlickMobile.hasClass('slick-initialized')) {
       _socialsSlickMobile.slick('unslick');
     }

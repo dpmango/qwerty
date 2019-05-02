@@ -55,9 +55,15 @@
         })
 
         // open vacancies info vacancies page
-        .on('click', '[js-open-vacancy]', function() {
+        .on('click', '[js-open-vacancy--pr]', function() {
           $('.vacancies__main').fadeOut();
-          $('.vacancies__about').fadeIn();
+          $('.vacancies__about--pr').fadeIn();
+        })
+
+        // open vacancies info vacancies page
+        .on('click', '[js-open-vacancy--designer]', function() {
+          $('.vacancies__main').fadeOut();
+          $('.vacancies__about--designer').fadeIn();
         })
 
         // close vacancies info vacancies page

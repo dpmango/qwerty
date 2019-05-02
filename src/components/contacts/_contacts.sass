@@ -45,10 +45,14 @@
       color: #c6c6c6
 
   .container
-    padding-top: 220px
+    padding-top: 200px
     position: relative
     z-index: 2
     text-align: center
+
+  &__shadow
+    h2
+      display: none
 
   &__container
     max-width: 650px
@@ -106,6 +110,7 @@
           box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.8)
           left: 0
           top: 0
+          background: #2f2022
 
       &:nth-child(2)
         &:before
@@ -118,6 +123,7 @@
           box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.8)
           right: 0
           top: 0
+          background: #2f2022
         
 
     a
@@ -172,6 +178,7 @@
       width: 100%
       padding: 10px 20px 20px
       h2
+        display: block
         color: #fff
     &__info
       display: flex

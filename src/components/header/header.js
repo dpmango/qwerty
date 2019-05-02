@@ -13,6 +13,7 @@
     closeMobileMenu: function(isOnload) {
       $('[js-hamburger]').removeClass('is-active');
       $('.mobile-navi').removeClass('is-active');
+      $('.header').removeClass('is-active');
 
       APP.Modules.ScrollBlock.blockScroll(isOnload);
     },
@@ -21,6 +22,7 @@
         $(this).toggleClass('is-active');
         $('.mobile-navi').toggleClass('is-active');
         $('.header__phone').toggleClass('is-active');
+        $('.header').toggleClass('is-active');
 
         APP.Modules.ScrollBlock.blockScroll();
       });

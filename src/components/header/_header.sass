@@ -68,6 +68,25 @@
       font-size: 14px
       font-weight: 700
 
+  &.is-active
+    .header__language
+      color: #fff !important
+    .hamburger-inner
+      background: #fff !important
+      &:after
+        background: #fff !important
+
+.fp-viewing-0.editable,
+.fp-viewing-1.editable,
+.fp-viewing-3.editable
+  .header
+    .header__language
+      color: #000
+    .hamburger-inner
+      background: #000
+      &:after
+        background: #000
+
 
 +r($lg)
   .header

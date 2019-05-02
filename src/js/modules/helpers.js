@@ -7,6 +7,24 @@ $(function() {
   $('select').selectric();
 });
 
+$(function() {
+  if ($('.blog').length > 0) {
+    $('.header__logo').css('display', 'none');
+  }
+});
+
+$(function() {
+  if ($('.portfolio').length > 0) {
+    $('.header__logo').css('display', 'none');
+  }
+});
+
+$(function() {
+  if ($('.portfolio--page').length > 0) {
+    $('body').addClass('editable');
+  }
+});
+
 // LINEAR NORMALIZATION
 function normalize(value, fromMin, fromMax, toMin, toMax) {
   var pct = (value - fromMin) / (fromMax - fromMin);

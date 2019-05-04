@@ -63,24 +63,27 @@
 
     &:before
       position: absolute
-      width: 1px
+      width: 12px
       height: 100%
       background: transparent
       content: ''
       display: block
-      box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.5)
-      left: -20px
+      // background: #2f1f22
+      background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
+      left: -30px
       top: 0
 
     &:after
       position: absolute
-      width: 1px
+      width: 12px
       height: 100%
       background: transparent
       content: ''
       display: block
-      box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.5)
-      right: -20px
+      // background: #2f1f22
+      // box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.5)
+      background: linear-gradient(to right, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%)
+      right: -30px
       top: 0
 
   &__info
@@ -104,26 +107,27 @@
           position: absolute
           display: block
           content: ''
-          width: 1px
+          width: 12px
           height: 100%
           background: transparent
-          box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.8)
+          background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 100%);
           left: 0
           top: 0
-          background: #2f2022
+          // background: #2f1f22
 
       &:nth-child(2)
         &:before
           position: absolute
           display: block
           content: ''
-          width: 1px
+          width: 12px
           height: 100%
-          background: transparent
-          box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.8)
+          // background: transparent
+          background: linear-gradient(to right, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0) 100%)
+          // box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.8)
           right: 0
           top: 0
-          background: #2f2022
+          // background: #2f1f22
         
 
     a

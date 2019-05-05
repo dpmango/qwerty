@@ -75,6 +75,10 @@
 
   &__result
     text-align: center
+    &-container
+      outline: 1px solid red
+      margin-left: -20px
+      width: 100%
     h2
       color: #fff
       margin: 0 0 25px
@@ -367,10 +371,25 @@
       font-weight: 600
       margin-top: 15px
 
+    &__result
+      h2
+        margin-bottom: 15px
+
     &__result-line
-      max-width: 104px
-      .line
-        width: 90px
+      &.l1
+        max-width: 188px
+        .line
+          width: 170px
+      &.l2
+        max-width: 158px
+        .line
+          width: 142px
+      &.l3
+        max-width: 140px
+        .line
+          width: 123px
+      // .line
+        // width: 90px
 
     &__grid
       flex-wrap: wrap

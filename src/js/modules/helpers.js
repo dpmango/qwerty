@@ -3,25 +3,25 @@
 //////////////////////////////////
 
 // INIT SELECTRIC
-$(function() {
-  $('select').selectric();
-});
 
 $(function() {
+  $('select').selectric();
+
   if ($('.blog').length > 0) {
     $('.header__logo').css('display', 'none');
   }
-});
 
-$(function() {
   if ($('.portfolio').length > 0) {
     $('.header__logo').css('display', 'none');
+    $('.header__right').addClass('mobile-black');
   }
-});
 
-$(function() {
   if ($('.portfolio--page').length > 0) {
     $('body').addClass('editable');
+  }
+
+  if ($('.homepage').length > 0) {
+    $('.header__phone').css('display', 'block');
   }
 });
 

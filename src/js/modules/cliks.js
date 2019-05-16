@@ -99,6 +99,12 @@
             .toggleClass('is-open');
         })
 
+        .on('click', '[js-open-input-file]', function() {
+          $(this)
+            .parents('.input-file-parent')
+            .addClass('is-open');
+        })
+
         // scroll to section
         .on('click', 'a[href^="#section"]', function() {
           // section scroll
@@ -113,6 +119,45 @@
 
           return false;
         });
+
+      if ($(document).width() < 768) {
+        // $(document).on('click', '[js-open-vacancy--pr]', function() {
+        //   $('.vacancies__main').fadeOut();
+        //   $('.vacancies__about--pr').fadeIn();
+        // })
+
+        $(document).on('click', '[js-close-vacancy]', function() {
+          $('.vacancies__about').fadeOut();
+          $('.vacancies__right').css('display', 'none');
+          $('.vacancies__content').fadeIn();
+        });
+
+        // open vacancies info vacancies page
+        $(document).on('click', '[js-open-vacancy--pr]', function() {
+          $('.vacancies__main').fadeOut();
+          $('.vacancies__about--pr').fadeIn();
+          $('.vacancies__right').css('display', 'block');
+        });
+
+        // open vacancies info vacancies page
+        $(document).on('click', '[js-open-vacancy--designer]', function() {
+          $('.vacancies__main').fadeOut();
+          $('.vacancies__about--designer').fadeIn();
+          $('.vacancies__right').css('display', 'block');
+        });
+
+        $(document).on('click', '[js-open-empty-request]', function() {
+          $('.vacancies__content').fadeOut();
+          $('.vacancies__request-form').fadeIn();
+          $('.vacancies__right-form .vacancies__close').css('display', 'block');
+        });
+
+        $(document).on('click', '[js-close-empty-form]', function() {
+          $('.vacancies__request-form').fadeOut();
+          $('.vacancies__content').fadeIn();
+          $('.vacancies__right-form .vacancies__close').css('display', 'none');
+        });
+      }
     },
     destroy: function() {
       // ... code ...

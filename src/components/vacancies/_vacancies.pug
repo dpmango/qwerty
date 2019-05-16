@@ -5,6 +5,7 @@
     // fp section
     .section.section--auto
       .section__bg(style="background-image: url(img/bg-vacancies.png)")
+        .section__bg.section__bg--vacanices-mobile(style="background-image: url(img/bg-contacts.png)")
       .section__title.section__title--portfolio
         p vacancies
       .container
@@ -36,17 +37,12 @@
                       p.vacancies__info You have not found a suitable vacancy, but still want to create the future with us? If you are experienced enough in one of the areas in which our company specializes, you have a portfolio and you are a fan of the digital world, fill out the feedback form and you will at least make a new acquaintance
                 .swiper-pagination
               .vacancies__request
-                a.btn(href="#" js-open-request) SEND REQUEST
-
-            .vacancies__right
-              .vacancies__item.vacancies__item--editable
-                a.vacancies__close(href="#" js-close-vacancy)
+                a.btn(href="#" js-open-empty-request) SEND REQUEST
+            .vacancies__request-form
+              .vacancies__right-form
+                a.vacancies__close(href="#" js-close-empty-form)
                   .icon
                     +svgColor('close')
-                .vacancies__image
-                  img(src="img/vacancies-1.png", alt="")
-                p.vacancies__title PR manager
-              .vacancies__right-form
                 form.js-form-homepage(action="#")
                   .contacts__shadow
                     h2 BECOME PART OF THE TEAM
@@ -59,6 +55,71 @@
                     .input-container(js-input-focus)
                       label.input-container__floating-label Email
                       input(type="text" name="email" placeholder="" autocomplete="off")
+                    .input-file-parent
+                      .input-container.input-container--file(js-input-focus)
+                        label.input-container__floating-label LINK TO PORTFOLIO OR DOWNLOAD THE FILE
+                        input(type="text" name="filelink" placeholder="" autocomplete="off")
+                        a.input-container__open-file(href="#" js-open-input-file)
+                          .icon
+                            +svgMono('link')
+                      .input-container.input-container--file-container(js-input-focus)
+                        label.input-container__floating-label UPLOAD THE FILE
+                        .file-upload
+                          .file-select
+                            #noFile.file-select-name No file chosen...
+                            input#chooseFile(type='file', name='chooseFile')
+                    //- .input-container(js-input-focus)
+                    //-   label.input-container__floating-label LINK TO PORTFOLIO OR DOWNLOAD THE FILE
+                    //-   input(type="file" placeholder="" autocomplete="off")
+                    .input-container.input-container--textarea(js-input-focus)
+                      span
+                      span
+                      label.input-container__floating-label Message
+                      textarea(name="message" rows="3" data-limit-rows="true" autocomplete="off")
+                      //- .input-container__text
+                  .contacts__success
+                    input.btn(type="submit" value="send")
+                    p Thank you. Your request has been received and we will get back to you shortly.
+                      br
+                      | You are amazing!
+
+            .vacancies__right
+              .vacancies__item.vacancies__item--editable
+                a.vacancies__close(href="#" js-close-vacancy)
+                  .icon
+                    +svgColor('close')
+                .vacancies__image
+                  img(src="img/vacancies-1.png", alt="")
+                p.vacancies__title PR manager
+              .vacancies__right-form
+                a.vacancies__close(href="#" js-close-empty-form)
+                  .icon
+                    +svgColor('close')
+                form.js-form-homepage(action="#")
+                  .contacts__shadow
+                    h2 BECOME PART OF THE TEAM
+                    .input-container(js-input-focus)
+                      label.input-container__floating-label Name
+                      input(type="text" name="name" placeholder="" autocomplete="off")
+                    .input-container(js-input-focus)
+                      label.input-container__floating-label Phone
+                      input(type="text" name="phone" placeholder="" autocomplete="off")
+                    .input-container(js-input-focus)
+                      label.input-container__floating-label Email
+                      input(type="text" name="email" placeholder="" autocomplete="off")
+                    .input-file-parent
+                      .input-container.input-container--file(js-input-focus)
+                        label.input-container__floating-label LINK TO PORTFOLIO OR DOWNLOAD THE FILE
+                        input(type="text" name="filelink" placeholder="" autocomplete="off")
+                        a.input-container__open-file(href="#" js-open-input-file)
+                          .icon
+                            +svgMono('link')
+                      .input-container.input-container--file-container(js-input-focus)
+                        label.input-container__floating-label UPLOAD THE FILE
+                        .file-upload
+                          .file-select
+                            #noFile.file-select-name No file chosen...
+                            input#chooseFile(type='file', name='chooseFile')
                     //- .input-container(js-input-focus)
                     //-   label.input-container__floating-label LINK TO PORTFOLIO OR DOWNLOAD THE FILE
                     //-   input(type="file" placeholder="" autocomplete="off")
@@ -84,6 +145,9 @@
                   img(src="img/vacancies-1.png", alt="")
                 p.vacancies__title PR manager
               .vacancies__about-form
+                a.vacancies__close(href="#" js-close-vacancy)
+                  .icon
+                    +svgColor('close')
                 form.js-form-homepage(action="#")
                   .contacts__shadow
                     h2 BECOME PART OF THE TEAM
@@ -96,6 +160,19 @@
                     .input-container(js-input-focus)
                       label.input-container__floating-label Email
                       input(type="text" name="email" placeholder="" autocomplete="off")
+                    .input-file-parent
+                      .input-container.input-container--file(js-input-focus)
+                        label.input-container__floating-label LINK TO PORTFOLIO OR DOWNLOAD THE FILE
+                        input(type="text" name="filelink" placeholder="" autocomplete="off")
+                        a.input-container__open-file(href="#" js-open-input-file)
+                          .icon
+                            +svgMono('link')
+                      .input-container.input-container--file-container(js-input-focus)
+                        label.input-container__floating-label UPLOAD THE FILE
+                        .file-upload
+                          .file-select
+                            #noFile.file-select-name No file chosen...
+                            input#chooseFile(type='file', name='chooseFile')
                     //- .input-container(js-input-focus)
                     //-   label.input-container__floating-label LINK TO PORTFOLIO OR DOWNLOAD THE FILE
                     //-   input(type="file" placeholder="" autocomplete="off")
@@ -170,6 +247,19 @@
                     .input-container(js-input-focus)
                       label.input-container__floating-label Email
                       input(type="text" name="email" placeholder="" autocomplete="off")
+                    .input-file-parent
+                      .input-container.input-container--file(js-input-focus)
+                        label.input-container__floating-label LINK TO PORTFOLIO OR DOWNLOAD THE FILE
+                        input(type="text" name="filelink" placeholder="" autocomplete="off")
+                        a.input-container__open-file(href="#" js-open-input-file)
+                          .icon
+                            +svgMono('link')
+                      .input-container.input-container--file-container(js-input-focus)
+                        label.input-container__floating-label UPLOAD THE FILE
+                        .file-upload
+                          .file-select
+                            #noFile.file-select-name No file chosen...
+                            input#chooseFile(type='file', name='chooseFile')
                     //- .input-container(js-input-focus)
                     //-   label.input-container__floating-label LINK TO PORTFOLIO OR DOWNLOAD THE FILE
                     //-   input(type="file" placeholder="" autocomplete="off")

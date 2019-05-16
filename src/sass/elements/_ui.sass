@@ -89,6 +89,36 @@
         font-size: 10px
         color: rgba($colorLight, .5)
 
+  &--file
+    .input-container__floating-label
+      white-space: nowrap
+
+  &__open-file
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 20px
+    width: auto
+    display: inline-block
+    z-index: 2
+    .icon
+      font-size: 15px
+      color: #fff
+
+.input-container--file-container
+  display: none
+
+@keyframes fadein
+    from 
+      opacity: 0
+    to
+      opacity: 1
+
+.input-file-parent.is-open
+  .input-container--file-container
+    display: block
+    animation: fadein 2s
+
 .ui-input__validation
   position: absolute
   left: 50%
@@ -97,6 +127,97 @@
   transform: translateX(-50%)
   color: $colorRed
   width: 100%
+
+.file-upload
+  display: block
+  text-align: center
+  .file-select
+    display: block
+    text-align: center
+    background: transparent
+    overflow: hidden
+    position: relative
+    .file-select-name
+      -webkit-appearance: none
+      font-size: 12px
+      font-weight: 700
+      text-transform: uppercase
+      color: $colorLight
+      text-align: center
+      background: transparent
+      padding: 10px 15px
+      border: none
+      letter-spacing: 0.05em
+      font-family: $robotoFont
+      line-height: normal
+      resize: none
+      width: 100%
+      -webkit-line-clamp: 2
+      -webkit-box-orient: vertical
+      -o-text-overflow: ellipsis
+      text-overflow: ellipsis
+      opacity: 0
+    &:hover
+      border-color: #34495e
+      transition: all .2s ease-in-out
+      -moz-transition: all .2s ease-in-out
+      -webkit-transition: all .2s ease-in-out
+      -o-transition: all .2s ease-in-out
+      .file-select-button
+        background: #34495e
+        color: #FFFFFF
+        transition: all .2s ease-in-out
+        -moz-transition: all .2s ease-in-out
+        -webkit-transition: all .2s ease-in-out
+        -o-transition: all .2s ease-in-out
+  &.active .file-select
+    border-color: #3fa46a
+    transition: all .2s ease-in-out
+    -moz-transition: all .2s ease-in-out
+    -webkit-transition: all .2s ease-in-out
+    -o-transition: all .2s ease-in-out
+  &.active
+    .file-select-name
+      color: $colorLight
+      opacity: 1
+  .file-select
+    input[type=file]
+      z-index: 100
+      cursor: pointer
+      position: absolute
+      height: 100%
+      width: 100%
+      top: 0
+      left: 0
+      opacity: 0
+      filter: alpha(opacity = 0)
+    &.file-select-disabled
+      opacity: 0.65
+      &:hover
+        cursor: default
+        display: block
+        border: 2px solid #dce4ec
+        color: #34495e
+        cursor: pointer
+        height: 40px
+        line-height: 40px
+        margin-top: 5px
+        text-align: left
+        background: #FFFFFF
+        overflow: hidden
+        position: relative
+        .file-select-button
+          background: #dce4ec
+          color: #666666
+          padding: 0 10px
+          display: inline-block
+          height: 40px
+          line-height: 40px
+        .file-select-name
+          line-height: 40px
+          display: inline-block
+          padding: 0 10px
+
 
 +r($md)
   .input-container
@@ -122,6 +243,12 @@
     &__floating-label
       top: 6px
       font-size: 11px
+    .file-upload
+      .file-select
+        .file-select-name
+          font-size: 11px
+          padding: 6px 10px
+
   
 // WORKS KIND OF bootstrap - group have label and input
 // .ui-group

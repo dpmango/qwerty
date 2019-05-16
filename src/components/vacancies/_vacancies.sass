@@ -118,6 +118,9 @@
     margin-bottom: 35px
     position: relative
 
+    .vacancies__close
+      display: block
+
     &--editable
       text-align: center
       padding: 40px 30px 20px
@@ -157,6 +160,10 @@
         margin-bottom: 0
 
   &__request
+    display: none
+    &-form
+      display: none
+  &__close
     display: none
 
 +r($md)
@@ -209,6 +216,9 @@
       box-shadow: none
       &-form
         padding: 30px 15px 0px
+        position: relative
+        .vacancies__close
+          display: none
         h2
           margin: 0
           font-size: 14px
@@ -315,6 +325,10 @@
       text-align: center
       .btn
         margin-top: 35px
+
+      &-form
+        display: none
+        width: 100%
 
     &__slider
       margin: 0 -20px

@@ -133,6 +133,10 @@
         // },
       });
 
+      swiper3.on('slideChange', function() {
+        console.log('slide changed');
+      });
+
       //Swiper plugin initialization
       initSwiper();
 

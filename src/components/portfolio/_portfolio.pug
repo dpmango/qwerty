@@ -31,7 +31,7 @@
     .section.section--auto
       .section__bg(style="background-image: url(img/bg-lion.jpg)")
       .section__content.section__content--result
-        .container.y-center-flex
+        .container.y-center-flex(js-swiper-nav-container)
           .portfolio__bottom
             .portfolio__result
               h2 RESULT
@@ -41,10 +41,10 @@
                 p.after REDESIGN
               p.portfolio__description We changed the logo, made it easier to understand, while maintaining the unique style.
           .portfolio__logotypes
-            .portfolio__logotypes-buttons
-              a.is-active(href="#" js-open-logo) logo
+            .portfolio__logotypes-buttons(js-swiper-nav)
+              a.is-active(href="#" data-slide="0") logo
               span /
-              a(href="#" js-open-logo-text) logo text
+              a(href="#" data-slide="1") logo text
             .logotypes-logo.logo.is-active
               .swiper-container(js-portfolio-item-slider)
                 .swiper-wrapper

@@ -28,20 +28,6 @@ $(function() {
     $('.header__phone').css('display', 'block');
   }
 
-  $('[js-portfolio-item-slider]').on('slideChange', function() {
-    console.log('slide changed');
-  });
-
-  if ($('.swiper-slide-logo').hasClass('swiper-slide-active')) {
-    $('[js-open-logo-text]').removeClass('is-active');
-    $('[js-open-logo]').addClass('is-active');
-  }
-
-  if ($('.swiper-slide-logo-text').hasClass('swiper-slide-active')) {
-    $('[js-open-logo]').removeClass('is-active');
-    $('[js-open-logo-text]').addClass('is-active');
-  }
-
   $('#chooseFile').bind('change', function() {
     var filename = $('#chooseFile').val();
     if (/^\s*$/.test(filename)) {

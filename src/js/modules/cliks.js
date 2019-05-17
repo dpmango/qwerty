@@ -32,34 +32,6 @@
           $.fn.fullpage.moveSectionDown();
         })
 
-        // open logo portfolio page
-        .on('click', '[js-open-logo]', function() {
-          $('.portfolio__logotypes-buttons a').removeClass('is-active');
-          $(this).addClass('is-active');
-          $('.swiper-button-prev').click();
-          // $('.logotypes-logo').removeClass('is-active');
-          // $('.logotypes-logo.logo').addClass('is-active');
-        })
-
-        .on('click', '.swiper-button-prev', function() {
-          $('.portfolio__logotypes-buttons a').removeClass('is-active');
-          $('[js-open-logo]').addClass('is-active');
-        })
-
-        // open logo-text portfolio page
-        .on('click', '[js-open-logo-text]', function() {
-          $('.portfolio__logotypes-buttons a').removeClass('is-active');
-          $(this).addClass('is-active');
-          $('.swiper-button-next').click();
-          // $('.logotypes-logo').removeClass('is-active');
-          // $('.logotypes-logo.logo-text').addClass('is-active');
-        })
-
-        .on('click', '.swiper-button-next', function() {
-          $('.portfolio__logotypes-buttons a').removeClass('is-active');
-          $('[js-open-logo-text]').addClass('is-active');
-        })
-
         // open request form contacts page
         .on('click', '[js-open-form]', function() {
           $('.contacts-page__info').addClass('closed');

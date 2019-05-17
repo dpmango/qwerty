@@ -2,10 +2,18 @@
   "name": "gulp-tpl",
   "description": "",
   "main": "index.js",
-  "authors": ["Sergey Khmelevskoy <sergey@khmelevskoy.co>"],
+  "authors": [
+    "Sergey Khmelevskoy <sergey@khmelevskoy.co>"
+  ],
   "license": "ISC",
   "homepage": "https://github.com/dpmango/gulp-starter-pack",
-  "ignore": ["**/.*", "node_modules", "bower_components", "test", "tests"],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
     "jquery-validation": "^1.17.0",
     "jquery-mask-plugin": "^1.14.11",
@@ -20,6 +28,7 @@
     "perfect-scrollbar": "^0.8.1",
     "jquery-selectric": "^1.13.0",
     "picturefill": "^3.0.3",
-    "fullpage.js": "^2.9.7"
+    "fullpage.js": "^2.9.7",
+    "sharer.js": "^0.3.8"
   }
 }

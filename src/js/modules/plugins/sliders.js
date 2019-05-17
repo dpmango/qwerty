@@ -100,7 +100,7 @@
         pagination: '.swiper-pagination',
         direction: 'vertical',
         slidesPerView: 1,
-        mousewheelControl: true,
+        mousewheel: true,
         parallax: true,
         speed: 600,
         pagination: {
@@ -110,7 +110,7 @@
           // when window width is <= 992px
           768: {
             loop: true,
-            mousewheelControl: false,
+            mousewheel: false,
             parallax: false,
             direction: 'horizontal',
           },

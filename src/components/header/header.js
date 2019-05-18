@@ -7,15 +7,18 @@
     init: function() {
       this.updateHeaderActiveClass();
       this.hamburgerClickListener();
+      this.closeMobileMenu();
       this.languageActive();
       this.scrollToNextSection();
     },
     closeMobileMenu: function(isOnload) {
-      $('[js-hamburger]').removeClass('is-active');
-      $('.mobile-navi').removeClass('is-active');
-      $('.header').removeClass('is-active');
+      _document.on('click', '.mobile-navi__menu li a', function() {
+        $('[js-hamburger]').removeClass('is-active');
+        $('.mobile-navi').removeClass('is-active');
+        $('.header').removeClass('is-active');
 
-      APP.Modules.ScrollBlock.blockScroll(isOnload);
+        APP.Modules.ScrollBlock.blockScroll(isOnload);
+      });
     },
     hamburgerClickListener: function() {
       _document.on('click', '[js-hamburger]', function() {
@@ -67,6 +70,9 @@
           $(val).removeClass('is-active');
         }
       });
+    },
+    destroy: function() {
+      // ... code ...
     },
   };
 })(jQuery, window.APP);

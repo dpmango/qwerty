@@ -5,7 +5,7 @@
   APP.Modules.Selectric = {
     init: function() {
       $(function() {
-        // $('select').selectric();
+        $('[js-select]').selectric();
       });
     },
     destroy: function() {

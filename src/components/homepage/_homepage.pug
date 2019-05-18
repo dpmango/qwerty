@@ -136,12 +136,12 @@
                       +svgMono('link')
                 .input-container.input-container--file-container(js-input-focus)
                   label.input-container__floating-label UPLOAD THE FILE
-                  .file-upload
+                  .file-upload(js-file-upload)
                     .file-select
-                      #noFile.file-select-name No file chosen...
+                      .file-select-name(js-noFile) No file chosen...
                       input#chooseFile(type='file', name='chooseFile')
               .input-container(js-input-focus)
-                select
+                select(js-select)
                   option(value="val0" selected disabled) service
                   option(value="val1") Design
                   option(value="val2") Development

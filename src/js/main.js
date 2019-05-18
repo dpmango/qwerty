@@ -71,6 +71,8 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       // APP.Modules.CloneInput.init();
       APP.Modules.TextareaAutoExpand.init();
       APP.Modules.Validations.init();
+      APP.Modules.LengthStyles.init();
+      APP.Modules.FileUpload.init();
     };
 
     app.initComponenets = function() {

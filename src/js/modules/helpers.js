@@ -2,44 +2,6 @@
 // HELPERS and PROTOTYPE FUNCTIONS
 //////////////////////////////////
 
-// INIT SELECTRIC
-
-$(function() {
-  $('select').selectric();
-
-  if ($('.blog').length > 0) {
-    $('.header__logo').css('display', 'none');
-  }
-
-  if ($('.portfolio').length > 0) {
-    $('.header__logo').css('display', 'none');
-    $('.header__right').addClass('mobile-black');
-  }
-
-  if ($('.portfolio--fullpage').length > 0) {
-    $('.header__right').removeClass('mobile-black');
-  }
-
-  if ($('.portfolio--page').length > 0) {
-    $('body').addClass('editable');
-  }
-
-  if ($('.homepage').length > 0) {
-    $('.header__phone').css('display', 'block');
-  }
-
-  $('#chooseFile').bind('change', function() {
-    var filename = $('#chooseFile').val();
-    if (/^\s*$/.test(filename)) {
-      $('.file-upload').removeClass('active');
-      $('#noFile').text('No file chosen...');
-    } else {
-      $('.file-upload').addClass('active');
-      $('#noFile').text(filename.replace('C:\\fakepath\\', ''));
-    }
-  });
-});
-
 // LINEAR NORMALIZATION
 function normalize(value, fromMin, fromMax, toMin, toMax) {
   var pct = (value - fromMin) / (fromMax - fromMin);

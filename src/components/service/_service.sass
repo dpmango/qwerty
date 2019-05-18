@@ -15,9 +15,16 @@
 
   .container
     position: relative
-    min-height: calc(100vh - 100px)
-    height: calc(100vh - 100px)
-    padding: 150px 0 20px
+    min-height: 100vh
+    height: 100vh
+    // padding: 150px 0 20px
+
+  .fp-scroller
+    position: relative
+    // max-height: 100vh
+
+  .section__scroll
+    // display: none
 
   .swiper-container
     position: relative
@@ -181,6 +188,12 @@
 
   .swiper-pagination
     display: none
+  .swiper-slide
+    padding: 100px 0
+
+  &__button
+    &--mobile
+      display: none
 
 
 +r($md)

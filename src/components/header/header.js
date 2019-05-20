@@ -4,23 +4,22 @@
 (function($, APP) {
   APP.Componenets.Header = {
     data: {},
-    init: function() {
-      this.updateHeaderActiveClass();
-      this.hamburgerClickListener();
-      this.closeMobileMenu();
-      this.languageActive();
-      this.scrollToNextSection();
+    init: function(fromPjax) {
+      if (!fromPjax) {
+        this.hamburgerClickListener();
+        this.languageActive();
+        this.scrollToNextSection();
+      }
     },
     closeMobileMenu: function(isOnload) {
-      _document.on('click', '.mobile-navi__menu li a', function() {
-        $('[js-hamburger]').removeClass('is-active');
-        $('.mobile-navi').removeClass('is-active');
-        $('.header').removeClass('is-active');
+      $('[js-hamburger]').removeClass('is-active');
+      $('.mobile-navi').removeClass('is-active');
+      $('.header').removeClass('is-active');
 
-        APP.Modules.ScrollBlock.blockScroll(isOnload);
-      });
+      APP.Modules.ScrollBlock.blockScroll(isOnload);
     },
     hamburgerClickListener: function() {
+      var _this = this;
       _document.on('click', '[js-hamburger]', function() {
         $(this).toggleClass('is-active');
         $('.mobile-navi').toggleClass('is-active');
@@ -28,6 +27,11 @@
         $('.header').toggleClass('is-active');
 
         APP.Modules.ScrollBlock.blockScroll();
+      });
+
+      _document.on('click', '.mobile-navi__menu li a', function(e) {
+        e.stopPropagation();
+        _this.closeMobileMenu(true);
       });
     },
     languageActive: function() {
@@ -52,24 +56,6 @@
       //     700,
       //   );
       // });
-    },
-    updateHeaderActiveClass: function() {
-      // SET ACTIVE CLASS IN HEADER
-      // * could be removed in production and server side rendering when header is inside barba-container
-      var headerMenuList = $('.header__menu li');
-      if (headerMenuList.length === 0) return;
-
-      headerMenuList.each(function(i, val) {
-        if (
-          $(val)
-            .find('a')
-            .attr('href') == window.location.pathname.split('/').pop()
-        ) {
-          $(val).addClass('is-active');
-        } else {
-          $(val).removeClass('is-active');
-        }
-      });
     },
     destroy: function() {
       // ... code ...

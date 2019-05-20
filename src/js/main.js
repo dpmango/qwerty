@@ -31,8 +31,11 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
     };
 
     app.refresh = function() {
-      app.initPlugins();
-      app.initComponenets();
+      $('body').attr('style', '');
+      APP.Componenets.Header.closeMobileMenu(true);
+      app.initPlugins(true);
+      app.initComponenets(true);
+      APP.Modules.Fullpage.refresh();
     };
 
     app.destroy = function() {};
@@ -57,10 +60,11 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Modules.Clicks.init();
       APP.Modules.AOS.init();
       APP.Modules.Barba.init();
+      APP.Modules.FileUpload.init();
+      APP.Modules.Fullpage.init();
     };
 
-    app.initPlugins = function() {
-      APP.Modules.Fullpage.init();
+    app.initPlugins = function(fromPjax) {
       APP.Modules.Sliders.init();
       APP.Modules.Modals.init();
       APP.Modules.Masks.init();
@@ -72,11 +76,10 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Modules.TextareaAutoExpand.init();
       APP.Modules.Validations.init();
       APP.Modules.LengthStyles.init();
-      APP.Modules.FileUpload.init();
     };
 
-    app.initComponenets = function() {
-      APP.Componenets.Header.init();
+    app.initComponenets = function(fromPjax) {
+      APP.Componenets.Header.init(fromPjax);
     };
 
     return app;

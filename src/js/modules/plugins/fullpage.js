@@ -7,13 +7,24 @@
       this.start();
       this.listenResize();
     },
-
+    refresh: function() {
+      this.start(true);
+    },
     listenResize: function() {
-      _window.on('resize', debounce(this.start, 200));
+      _window.on('resize', debounce(this.start.bind(this), 200));
     },
 
-    start: function() {
-      var $fullpage = $('[js-fullpage]');
+    start: function(isRefresh) {
+      var $fullpage = $('.page')
+        .last()
+        .find('[js-fullpage]');
+
+      if ($fullpage.length === 0) {
+        $('html').removeClass('fp-enabled');
+        $('html').attr('style', '');
+        return;
+      }
+      console.log($fullpage);
       var fpOptions = {
         scrollOverflow: true,
         scrollOverflowReset: true,
@@ -22,11 +33,13 @@
       };
 
       if (window.innerWidth >= 768) {
-        if (!$('html').hasClass('fp-enabled')) {
+        if (!$fullpage.hasClass('is-enabled')) {
+          $fullpage.addClass('is-enabled');
           $fullpage.fullpage(fpOptions);
         }
       } else {
-        if ($('html').hasClass('fp-enabled')) {
+        if ($fullpage.hasClass('is-enabled')) {
+          $fullpage.removeClass('is-enabled');
           $.fn.fullpage.destroy('all');
         }
       }

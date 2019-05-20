@@ -114,9 +114,14 @@
     display: flex
     align-items: center
     &-item
+      position: relative
       display: flex
       align-items: center
       margin-right: 30px
+      &:hover
+        .share
+          opacity: 1
+          pointer-events: all
     p
       font-family: $montseratFont
       font-size: 12px;

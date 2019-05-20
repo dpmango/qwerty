@@ -127,19 +127,6 @@
               .input-container(js-input-focus)
                 label.input-container__floating-label Email
                 input(type="text" name="email" placeholder="" autocomplete="off")
-              .input-file-parent
-                .input-container.input-container--file(js-input-focus)
-                  label.input-container__floating-label LINK TO PORTFOLIO OR DOWNLOAD THE FILE
-                  input(type="text" name="filelink" placeholder="" autocomplete="off")
-                  a.input-container__open-file(href="#" js-open-input-file)
-                    .icon
-                      +svgMono('link')
-                .input-container.input-container--file-container(js-input-focus)
-                  label.input-container__floating-label UPLOAD THE FILE
-                  .file-upload(js-file-upload)
-                    .file-select
-                      .file-select-name(js-noFile) No file chosen...
-                      input#chooseFile(type='file', name='chooseFile')
               .input-container(js-input-focus)
                 select(js-select)
                   option(value="val0" selected disabled) service

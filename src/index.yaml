@@ -4,18 +4,18 @@ PageList:
   - file: homepage.html
     ready: 100
   - file: about.html
-    ready: 90
+    ready: 100
   - file: portfolio-first.html
-    ready: 90
+    ready: 100
   - file: portfolio.html
-    ready: 90
+    ready: 100
   - file: service.html
-    ready: 90
+    ready: 100
   - file: blog.html
-    ready: 90
+    ready: 100
   - file: blog-page.html
-    ready: 90
+    ready: 100
   - file: contacts.html
-    ready: 90
+    ready: 100
   - file: vacancies.html
-    ready: 90
+    ready: 100

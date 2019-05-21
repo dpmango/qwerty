@@ -28,7 +28,7 @@
       var fpOptions = {
         scrollOverflow: true,
         scrollOverflowReset: true,
-        responsiveWidth: 768,
+        // responsiveWidth: 768,
         // https://github.com/alvarotrigo/fullpage.js
       };
 
@@ -37,12 +37,13 @@
           $fullpage.addClass('is-enabled');
           $fullpage.fullpage(fpOptions);
         }
-      } else {
-        if ($fullpage.hasClass('is-enabled')) {
-          $fullpage.removeClass('is-enabled');
-          $.fn.fullpage.destroy('all');
-        }
       }
+      // else {
+      //   if ($fullpage.hasClass('is-enabled')) {
+      //     // $fullpage.removeClass('is-enabled');
+      //     // $.fn.fullpage.destroy('all');
+      //   }
+      // }
     },
   };
 })(jQuery, window.APP);

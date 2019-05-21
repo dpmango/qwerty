@@ -43,11 +43,13 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
     // pjax triggers
     app.newPageReady = function() {
       app.refresh();
+      // APP.Modules.LengthStyles.init();
     };
 
     app.transitionCompleted = function() {
       APP.Modules.AOS.refresh();
       app.onLoadTrigger();
+      APP.Modules.LengthStyles.init();
     };
 
     // combine types
@@ -62,6 +64,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Modules.Barba.init();
       APP.Modules.FileUpload.init();
       APP.Modules.Fullpage.init();
+      // APP.Modules.LengthStyles.init();
     };
 
     app.initPlugins = function(fromPjax) {

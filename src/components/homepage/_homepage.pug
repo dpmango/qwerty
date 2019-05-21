@@ -1,152 +1,7 @@
 
 // HOMEPAGE
-.homepage
+.homepage.homepage--desktop
   .fullpage(js-fullpage)
-    //- // fp section
-    //- .section.section--firstscreen.section--mobile
-    //-   .section__bg(style="background-image: url(img/fpScreenBg_1.png)")
-    //-     //- img(src='img/fpScreenBg_1.png')
-    //-   .section__content
-    //-     .container.y-center-flex
-    //-       .section__info
-    //-         //- img(src="img/h1-homepage.svg", alt="")
-    //-         +svgColor('homepage')
-    //-         //- h1 
-    //-         //-   span.line We
-    //-         //-   |  know all 
-    //-         //-   span.little about 
-    //-         //-   span.ls digital future
-    //-         p.section__info-description Creators of world class websites, brand identity and advance.
-    //-   .section__scroll
-    //-     a(href="#" js-move-down)
-    //-       span
-    //-         .dot
-    //-     | scroll to discover
-    //- // fp section
-    //- .section.section--service.section--mobile
-    //-   .section__bg(style="background-image: url(img/bg-service.png)")
-    //-     //- img(src='img/bg-service.png')
-    //-   .section__content.section__content--padding
-    //-     .section__title
-    //-       p SERVICE
-    //-     .section__title.section__title--mobile
-    //-       p SHOWREEL
-    //-     .container.y-center-flex
-    //-       .section__container-center
-    //-         h2 CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
-    //-       .service__slider-container(js-mobile-slider)
-    //-         .service__grid.swiper-wrapper
-    //-           .service__item.swiper-slide
-    //-             p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
-    //-             .service__icon-container
-    //-               .service__icon-border
-    //-                 .service__icon
-    //-                   +svgMono('development')
-    //-             p.service__title Development
-    //-             p.service__info We create all kinds of websites, namely, online stores, corporate sites, landing pages and many others. We do high-quality web development for you as for yourself. Only fresh ideas and no cliches –our employees, who is responsible for web development and support service, follow this rule."
-    //-           .service__item.swiper-slide
-    //-             p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
-    //-             .service__icon-container
-    //-               .service__icon
-    //-                 +svgMono('design')
-    //-             p.service__title Design
-    //-             p.service__info We offer our clients the following services: web design, UI / UX design and motion design. We successfully cooperate with small and large companies of various activities and make design talk about your company and increase the response of your customers.
-    //-           .service__item.swiper-slide
-    //-             p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
-    //-             .service__icon-container
-    //-               .service__icon.service__icon--analis
-    //-                 +svgColor('analis')
-    //-             p.service__title Analysis and Promotion
-    //-             p.service__info We can handle with work you are never imagined. SMM, SEO, targeting advertising and AdWords are those skills that we are perfect to provide and always try to exceed the result expectations of our custumers. 
-    //-           .service__item.swiper-slide
-    //-             p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
-    //-             .service__icon-container
-    //-               .service__icon
-    //-                 +svgColor('branding')
-    //-             p.service__title Branding
-    //-             p.service__info Our company differs from our competitors. We have achieved great success when working in the following areas: brand strategy, brand identity, visual identification system, packaging design and naming
-    //-         .swiper-pagination
-    //- // fp section
-    //- .section.section--mobile
-    //-   .section__bg.section__bg--different(style="background-image: url(img/fpScreenBg_2.png)")
-    //-     //- img(src='img/fpScreenBg_2.png')
-    //-     //- img.mobile-bg(src='img/mobile-bg.jpg')
-    //-     span.mobile-bg(style="background-image: url(img/mobile-bg.jpg")
-    //-   .section__content
-    //-     .container.y-center-flex
-    //-       a.section__popup-btn(href="https://www.youtube.com/watch?v=GS4v7E5QFwE" js-popup-video)
-    //-         .section__mobile
-    //-           p CREATIVITY
-    //-           .section__mobile-icon
-    //-             +svgColor('play')
-    //-           p FUTURE
-    //-   .section__scroll
-    //-     a(href="#" js-move-down)
-    //-       span
-    //-         .dot
-    //-     | scroll to discover or press 
-    //-     a(href="#" js-move-down)  skip
-    //- // fp section
-    //- .section.section--contacts.section--mobile
-    //-   //- .contacts__contacts-bg
-    //-   .section__bg(style="background-image: url(img/bg-contacts.png)")
-    //-     //- img(src='img/bg-contacts.png')
-    //-   .contacts__letter
-    //-     //- p q
-    //-     //- p q
-    //-     img.bg(src='img/bg-contacts.png')
-    //-     img.q-left(src="img/q.png", alt="")
-    //-     img.q(src="img/q.png", alt="")
-    //-   .section__content.section__content--padding
-    //-     .container.y-center-flex
-    //-       .section__title
-    //-         p contacts
-    //-       .section__container-center
-    //-         h2.white JUST LEAVE REQUEST, AND OUR REPRESENTATIVE WILL IMMEDIATELY CONTACT YOU
-    //-       form.js-form-homepage(action="#")
-    //-         .contacts__shadow
-    //-           h2 JUST LEAVE REQUEST, AND OUR REPRESENTATIVE WILL IMMEDIATELY CONTACT YOU
-    //-           .input-container(js-input-focus)
-    //-             label.input-container__floating-label Name
-    //-             input(type="text" name="name" placeholder="" autocomplete="off")
-    //-           .input-container(js-input-focus)
-    //-             label.input-container__floating-label Phone
-    //-             input(type="text" name="phone" placeholder="" autocomplete="off")
-    //-           .input-container(js-input-focus)
-    //-             label.input-container__floating-label Email
-    //-             input(type="text" name="email" placeholder="" autocomplete="off")
-    //-           .input-container(js-input-focus)
-    //-             select(js-select)
-    //-               option(value="val0" selected disabled) service
-    //-               option(value="val1") Design
-    //-               option(value="val2") Development
-    //-               option(value="val3") Branding
-    //-               option(value="val4") Analysis and Promotion
-    //-           .input-container.input-container--textarea(js-input-focus)
-    //-             span
-    //-             span
-    //-             label.input-container__floating-label Message
-    //-             textarea(name="message" rows="3" data-limit-rows="true" autocomplete="off")
-    //-             //- .input-container__text
-    //-         .contacts__success
-    //-           input.btn(type="submit" value="send")
-    //-           p Thank you. Your request has been received and we will get back to you shortly.
-    //-             br
-    //-             | You are amazing!
-    //-   .section__footer
-    //-     .container
-    //-       .section__footer-left
-    //-         p 2019 QWERTY CO LLC
-    //-       .section__footer-right
-    //-         .mobile-navi__socials
-    //-           a.mobile-navi__icon.mobile-navi__icon--dribble(href="https://dribbble.com/Qwerty-co" target="_blank")
-    //-             +svgMono('dribble')
-    //-           a.mobile-navi__icon.mobile-navi__icon--behance(href="http://www.behance.net/qwertyagency" target="_blank")
-    //-             +svgColor('behance-new')
-    //-           a.mobile-navi__icon.mobile-navi__icon--instagram(href="https://instagram.com/qwerty.agency" target="_blank")
-    //-             +svgMono('instagram')
-    //-           a.mobile-navi__icon.mobile-navi__icon--facebook(href="https://www.facebook.com/qwerty.co.llc/" target="_blank")
-    //-             +svgColor('facebook-new')
     // fp section
     .section.section--firstscreen.section--desktop
       .section__bg(style="background-image: url(img/fpScreenBg_1.png)")
@@ -245,6 +100,154 @@
             .swiper-pagination
     // fp section
     .section.section--contacts.section--desktop
+      //- .contacts__contacts-bg
+      .section__bg(style="background-image: url(img/bg-contacts.png)")
+        //- img(src='img/bg-contacts.png')
+      .contacts__letter
+        //- p q
+        //- p q
+        img.bg(src='img/bg-contacts.png')
+        img.q-left(src="img/q.png", alt="")
+        img.q(src="img/q.png", alt="")
+      .section__content.section__content--padding
+        .container.y-center-flex
+          .section__title
+            p contacts
+          .section__container-center
+            h2.white JUST LEAVE REQUEST, AND OUR REPRESENTATIVE WILL IMMEDIATELY CONTACT YOU
+          form.js-form-homepage(action="#")
+            .contacts__shadow
+              h2 JUST LEAVE REQUEST, AND OUR REPRESENTATIVE WILL IMMEDIATELY CONTACT YOU
+              .input-container(js-input-focus)
+                label.input-container__floating-label Name
+                input(type="text" name="name" placeholder="" autocomplete="off")
+              .input-container(js-input-focus)
+                label.input-container__floating-label Phone
+                input(type="text" name="phone" placeholder="" autocomplete="off")
+              .input-container(js-input-focus)
+                label.input-container__floating-label Email
+                input(type="text" name="email" placeholder="" autocomplete="off")
+              .input-container(js-input-focus)
+                select(js-select)
+                  option(value="val0" selected disabled) service
+                  option(value="val1") Design
+                  option(value="val2") Development
+                  option(value="val3") Branding
+                  option(value="val4") Analysis and Promotion
+              .input-container.input-container--textarea(js-input-focus)
+                span
+                span
+                label.input-container__floating-label Message
+                textarea(name="message" rows="3" data-limit-rows="true" autocomplete="off")
+                //- .input-container__text
+            .contacts__success
+              input.btn(type="submit" value="send")
+              p Thank you. Your request has been received and we will get back to you shortly.
+                br
+                | You are amazing!
+      .section__footer
+        .container
+          .section__footer-left
+            p 2019 QWERTY CO LLC
+          .section__footer-right
+            .mobile-navi__socials
+              a.mobile-navi__icon.mobile-navi__icon--dribble(href="https://dribbble.com/Qwerty-co" target="_blank")
+                +svgMono('dribble')
+              a.mobile-navi__icon.mobile-navi__icon--behance(href="http://www.behance.net/qwertyagency" target="_blank")
+                +svgColor('behance-new')
+              a.mobile-navi__icon.mobile-navi__icon--instagram(href="https://instagram.com/qwerty.agency" target="_blank")
+                +svgMono('instagram')
+              a.mobile-navi__icon.mobile-navi__icon--facebook(href="https://www.facebook.com/qwerty.co.llc/" target="_blank")
+                +svgColor('facebook-new')
+// HOMEPAGE
+.homepage.homepage--mobile
+  .fullpage(js-fullpage)  
+    // fp section
+    .section.section--firstscreen.section--mobile
+      .section__bg(style="background-image: url(img/fpScreenBg_1.png)")
+        //- img(src='img/fpScreenBg_1.png')
+      .section__content
+        .container.y-center-flex
+          .section__info
+            //- img(src="img/h1-homepage.svg", alt="")
+            +svgColor('homepage')
+            //- h1 
+            //-   span.line We
+            //-   |  know all 
+            //-   span.little about 
+            //-   span.ls digital future
+            p.section__info-description 2Creators of world class websites, brand identity and advance.
+      .section__scroll
+        a(href="#" js-move-down)
+          span
+            .dot
+        | scroll to discover
+    // fp section
+    .section.section--service.section--mobile
+      .section__bg(style="background-image: url(img/bg-service.png)")
+        //- img(src='img/bg-service.png')
+      .section__content.section__content--padding
+        .section__title
+          p SERVICE
+        .section__title.section__title--mobile
+          p SHOWREEL
+        .container.y-center-flex
+          .section__container-center
+            h2 CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
+          .service__slider-container(js-mobile-slider)
+            .service__grid.swiper-wrapper
+              .service__item.swiper-slide
+                p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
+                .service__icon-container
+                  .service__icon-border
+                    .service__icon
+                      +svgMono('development')
+                p.service__title Development
+                p.service__info We create all kinds of websites, namely, online stores, corporate sites, landing pages and many others. We do high-quality web development for you as for yourself. Only fresh ideas and no cliches –our employees, who is responsible for web development and support service, follow this rule."
+              .service__item.swiper-slide
+                p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
+                .service__icon-container
+                  .service__icon
+                    +svgMono('design')
+                p.service__title Design
+                p.service__info We offer our clients the following services: web design, UI / UX design and motion design. We successfully cooperate with small and large companies of various activities and make design talk about your company and increase the response of your customers.
+              .service__item.swiper-slide
+                p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
+                .service__icon-container
+                  .service__icon.service__icon--analis
+                    +svgColor('analis')
+                p.service__title Analysis and Promotion
+                p.service__info We can handle with work you are never imagined. SMM, SEO, targeting advertising and AdWords are those skills that we are perfect to provide and always try to exceed the result expectations of our custumers. 
+              .service__item.swiper-slide
+                p.service__mobile-title CHOOSE FROM OUR SKILLS FOR YOUR BUSINESS
+                .service__icon-container
+                  .service__icon
+                    +svgColor('branding')
+                p.service__title Branding
+                p.service__info Our company differs from our competitors. We have achieved great success when working in the following areas: brand strategy, brand identity, visual identification system, packaging design and naming
+            .swiper-pagination
+    // fp section
+    .section.section--mobile
+      .section__bg.section__bg--different(style="background-image: url(img/fpScreenBg_2.png)")
+        //- img(src='img/fpScreenBg_2.png')
+        //- img.mobile-bg(src='img/mobile-bg.jpg')
+        span.mobile-bg(style="background-image: url(img/mobile-bg.jpg")
+      .section__content
+        .container.y-center-flex
+          a.section__popup-btn(href="https://www.youtube.com/watch?v=GS4v7E5QFwE" js-popup-video)
+            .section__mobile
+              p CREATIVITY
+              .section__mobile-icon
+                +svgColor('play')
+              p FUTURE
+      .section__scroll
+        a(href="#" js-move-down)
+          span
+            .dot
+        | scroll to discover or press 
+        a(href="#" js-move-down)  skip
+    // fp section
+    .section.section--contacts.section--mobile
       //- .contacts__contacts-bg
       .section__bg(style="background-image: url(img/bg-contacts.png)")
         //- img(src='img/bg-contacts.png')

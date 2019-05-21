@@ -32,7 +32,7 @@
         // https://github.com/alvarotrigo/fullpage.js
       };
 
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1) {
         if (!$fullpage.hasClass('is-enabled')) {
           $fullpage.addClass('is-enabled');
           $fullpage.fullpage(fpOptions);

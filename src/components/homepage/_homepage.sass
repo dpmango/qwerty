@@ -1,5 +1,18 @@
 .homepage
   display: block
+  &--mobile
+    display: none
+
++r($md)
+  .homepage
+    &--desktop
+      display: none
+    &--mobile
+      display: block
+      .fullpage
+        display: block
+      .section
+        order: 0
 
 @keyframes scroll
   0%

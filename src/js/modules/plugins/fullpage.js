@@ -40,8 +40,8 @@
       }
       // else {
       //   if ($fullpage.hasClass('is-enabled')) {
-      //     // $fullpage.removeClass('is-enabled');
-      //     // $.fn.fullpage.destroy('all');
+      //     $fullpage.removeClass('is-enabled');
+      //     $.fn.fullpage.destroy('all');
       //   }
       // }
     },

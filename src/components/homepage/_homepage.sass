@@ -6,13 +6,38 @@
 +r($md)
   .homepage
     &--desktop
-      display: none
-    &--mobile
-      display: block
-      .fullpage
-        display: block
+      // display: none
       .section
         order: 0
+    // &--mobile
+    //   display: block
+    //   .fullpage
+    //     display: block
+    //   .section
+    //     order: 0
+    //   .section--content
+    //     min-height: 100vh
+    //   .fp-tableCell
+    //     padding: 0 !important
+    //     margin: 0 !important
+    //     height: inherit
+    //   .fp-scrollable
+    //     min-height: 100vh
+    //   .fp-scroller
+    //     min-height: 100vh
+    //     overflow: auto
+    //   .fp-tableCell
+    //     display: block !important
+    //     overflow: auto
+    //   .section--contacts .fp-scroller
+    //     padding-bottom: 0
+    //   .section__footer
+    //     bottom: 10px
+    //     margin-top: 0
+    //     // padding-top: 145px
+    //   .section--contacts form
+    //     padding-top: 20px
+
 
 @keyframes scroll
   0%
@@ -37,7 +62,7 @@
 +r($md)
   .section
     &--desktop
-      display: none !important
+      // display: none !important
 
 +rmin($md)
   .section
@@ -436,8 +461,8 @@
 +r($md)
 
   .fullpage
-    display: flex
-    flex-direction: column
+    // display: flex
+    // flex-direction: column
     // overflow: hidden
 
   .section

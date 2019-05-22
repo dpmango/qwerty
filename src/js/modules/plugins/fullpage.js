@@ -15,16 +15,20 @@
     },
 
     start: function(isRefresh) {
-      var $fullpage = $('.page')
+      var $fullpageDesktop = $('.page')
         .last()
         .find('[js-fullpage]');
 
-      if ($fullpage.length === 0) {
+      var $fullpageMobile = $('.page')
+        .last()
+        .find('[js-fullpage-mobile]');
+
+      if ($fullpageDesktop.length === 0 && $fullpageMobile.length === 0) {
         $('html').removeClass('fp-enabled');
         $('html').attr('style', '');
         return;
       }
-      console.log($fullpage);
+
       var fpOptions = {
         scrollOverflow: true,
         scrollOverflowReset: true,
@@ -32,12 +36,20 @@
         // https://github.com/alvarotrigo/fullpage.js
       };
 
-      if (window.innerWidth >= 1) {
-        if (!$fullpage.hasClass('is-enabled')) {
-          $fullpage.addClass('is-enabled');
-          $fullpage.fullpage(fpOptions);
+      if (window.innerWidth >= 769) {
+        if (!$fullpageDesktop.hasClass('is-enabled')) {
+          $fullpageDesktop.addClass('is-enabled');
+          $fullpageDesktop.fullpage(fpOptions);
         }
       }
+
+      if (window.innerWidth <= 768) {
+        if (!$fullpageMobile.hasClass('is-enabled')) {
+          $fullpageMobile.addClass('is-enabled');
+          $fullpageMobile.fullpage(fpOptions);
+        }
+      }
+
       // else {
       //   if ($fullpage.hasClass('is-enabled')) {
       //     $fullpage.removeClass('is-enabled');

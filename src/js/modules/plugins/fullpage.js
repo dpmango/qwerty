@@ -23,39 +23,58 @@
         .last()
         .find('[js-fullpage-mobile]');
 
+      var haveBoth = false;
+
       if ($fullpageDesktop.length === 0 && $fullpageMobile.length === 0) {
         $('html').removeClass('fp-enabled');
         $('html').attr('style', '');
         return;
       }
 
-      var fpOptions = {
+      if ($fullpageDesktop.length > 0 && $fullpageMobile.length > 0) {
+        haveBoth = true;
+      }
+
+      // https://github.com/alvarotrigo/fullpage.js
+      var defaultFpOptions = {
         scrollOverflow: true,
         scrollOverflowReset: true,
-        // responsiveWidth: 768,
-        // https://github.com/alvarotrigo/fullpage.js
       };
+
+      var fpOptionsDesktop = {
+        scrollOverflow: true,
+        scrollOverflowReset: true,
+      };
+
+      if (!haveBoth) {
+        $.extend(fpOptionsDesktop, {
+          responsiveWidth: 768,
+        });
+      }
 
       if (window.innerWidth >= 769) {
         if (!$fullpageDesktop.hasClass('is-enabled')) {
           $fullpageDesktop.addClass('is-enabled');
-          $fullpageDesktop.fullpage(fpOptions);
+          $fullpageDesktop.fullpage(fpOptionsDesktop);
+        }
+      } else {
+        if ($fullpageDesktop.hasClass('is-enabled') && !haveBoth) {
+          $fullpageDesktop.removeClass('is-enabled');
+          $.fn.fullpage.destroy('all');
         }
       }
 
       if (window.innerWidth <= 768) {
         if (!$fullpageMobile.hasClass('is-enabled')) {
           $fullpageMobile.addClass('is-enabled');
-          $fullpageMobile.fullpage(fpOptions);
+          $fullpageMobile.fullpage(defaultFpOptions);
+        }
+      } else {
+        if ($fullpageMobile.hasClass('is-enabled') && !haveBoth) {
+          $fullpageMobile.removeClass('is-enabled');
+          $.fn.fullpage.destroy('all');
         }
       }
-
-      // else {
-      //   if ($fullpage.hasClass('is-enabled')) {
-      //     $fullpage.removeClass('is-enabled');
-      //     $.fn.fullpage.destroy('all');
-      //   }
-      // }
     },
   };
 })(jQuery, window.APP);

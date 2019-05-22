@@ -61,7 +61,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Modules.ScrollBlock.listenScroll();
       APP.Modules.Clicks.init();
       APP.Modules.AOS.init();
-      APP.Modules.Barba.init();
+      // APP.Modules.Barba.init();
       APP.Modules.FileUpload.init();
       APP.Modules.Fullpage.init();
       // APP.Modules.LengthStyles.init();

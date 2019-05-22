@@ -77,16 +77,24 @@
       &:after
         background: #fff !important
 
-.fp-viewing-0.editable,
-.fp-viewing-1.editable,
-.fp-viewing-3.editable
-  .header
-    .header__language
-      color: #000
-    .hamburger-inner
-      background: #000
-      &:after
+.fp-viewing-0,
+.fp-viewing-1,
+.fp-viewing-3
+  &.editable
+    .header
+      .header__language
+        color: #000
+      .hamburger-inner
         background: #000
+        &:after
+          background: #000
+
+      
+.fp-viewing-1,
+.fp-viewing-2,
+.fp-viewing-3
+  .header__phone
+    opacity: 0
 
 +rmin(769)
   .header

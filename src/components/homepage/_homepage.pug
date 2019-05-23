@@ -248,17 +248,12 @@
         a(href="#" js-move-down)  skip
     // fp section
     .section.section--contacts.section--mobile
-      //- .contacts__contacts-bg
-      .section__bg(style="background-image: url(img/bg-contacts.png)")
-        //- img(src='img/bg-contacts.png')
       .contacts__letter
-        //- p q
-        //- p q
         img.bg(src='img/bg-contacts.png')
         img.q-left(src="img/q.png", alt="")
         img.q(src="img/q.png", alt="")
       .section__content.section__content--padding
-        .container.y-center-flex
+        .container.y-center-flex(style="background-image: url(img/bg-contacts-mobile.png)")
           .section__title
             p contacts
           .section__container-center
@@ -293,17 +288,17 @@
               p Thank you. Your request has been received and we will get back to you shortly.
                 br
                 | You are amazing!
-      .section__footer
-        .container
-          .section__footer-left
-            p 2019 QWERTY CO LLC
-          .section__footer-right
-            .mobile-navi__socials
-              a.mobile-navi__icon.mobile-navi__icon--dribble(href="https://dribbble.com/Qwerty-co" target="_blank")
-                +svgMono('dribble')
-              a.mobile-navi__icon.mobile-navi__icon--behance(href="http://www.behance.net/qwertyagency" target="_blank")
-                +svgColor('behance-new')
-              a.mobile-navi__icon.mobile-navi__icon--instagram(href="https://instagram.com/qwerty.agency" target="_blank")
-                +svgMono('instagram')
-              a.mobile-navi__icon.mobile-navi__icon--facebook(href="https://www.facebook.com/qwerty.co.llc/" target="_blank")
-                +svgColor('facebook-new')
+          .section__footer
+            .container
+              .section__footer-left
+                p 2019 QWERTY CO LLC
+              .section__footer-right
+                .mobile-navi__socials
+                  a.mobile-navi__icon.mobile-navi__icon--dribble(href="https://dribbble.com/Qwerty-co" target="_blank")
+                    +svgMono('dribble')
+                  a.mobile-navi__icon.mobile-navi__icon--behance(href="http://www.behance.net/qwertyagency" target="_blank")
+                    +svgColor('behance-new')
+                  a.mobile-navi__icon.mobile-navi__icon--instagram(href="https://instagram.com/qwerty.agency" target="_blank")
+                    +svgMono('instagram')
+                  a.mobile-navi__icon.mobile-navi__icon--facebook(href="https://www.facebook.com/qwerty.co.llc/" target="_blank")
+                    +svgColor('facebook-new')

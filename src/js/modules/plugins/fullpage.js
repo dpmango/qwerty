@@ -47,32 +47,39 @@
       };
 
       if (!haveBoth) {
-        $.extend(fpOptionsDesktop, {
-          responsiveWidth: 768,
-        });
-      }
-
-      if (window.innerWidth >= 769) {
         if (!$fullpageDesktop.hasClass('is-enabled')) {
           $fullpageDesktop.addClass('is-enabled');
           $fullpageDesktop.fullpage(fpOptionsDesktop);
         }
       } else {
-        if ($fullpageDesktop.hasClass('is-enabled') && !haveBoth) {
-          $fullpageDesktop.removeClass('is-enabled');
-          $.fn.fullpage.destroy('all');
+        if (!haveBoth) {
+          $.extend(fpOptionsDesktop, {
+            responsiveWidth: 768,
+          });
         }
-      }
 
-      if (window.innerWidth <= 768) {
-        if (!$fullpageMobile.hasClass('is-enabled')) {
-          $fullpageMobile.addClass('is-enabled');
-          $fullpageMobile.fullpage(defaultFpOptions);
+        if (window.innerWidth >= 769) {
+          if (!$fullpageDesktop.hasClass('is-enabled')) {
+            $fullpageDesktop.addClass('is-enabled');
+            $fullpageDesktop.fullpage(fpOptionsDesktop);
+          }
+        } else {
+          if ($fullpageDesktop.hasClass('is-enabled') && !haveBoth) {
+            $fullpageDesktop.removeClass('is-enabled');
+            $.fn.fullpage.destroy('all');
+          }
         }
-      } else {
-        if ($fullpageMobile.hasClass('is-enabled') && !haveBoth) {
-          $fullpageMobile.removeClass('is-enabled');
-          $.fn.fullpage.destroy('all');
+
+        if (window.innerWidth <= 768) {
+          if (!$fullpageMobile.hasClass('is-enabled')) {
+            $fullpageMobile.addClass('is-enabled');
+            $fullpageMobile.fullpage(defaultFpOptions);
+          }
+        } else {
+          if ($fullpageMobile.hasClass('is-enabled') && !haveBoth) {
+            $fullpageMobile.removeClass('is-enabled');
+            $.fn.fullpage.destroy('all');
+          }
         }
       }
     },

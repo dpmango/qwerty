@@ -39,11 +39,13 @@
       var defaultFpOptions = {
         scrollOverflow: true,
         scrollOverflowReset: true,
+        onLeave: onLeaveCb,
       };
 
       var fpOptionsDesktop = {
         scrollOverflow: true,
         scrollOverflowReset: true,
+        onLeave: onLeaveCb,
       };
 
       if (!haveBoth) {
@@ -79,6 +81,21 @@
           if ($fullpageMobile.hasClass('is-enabled') && !haveBoth) {
             $fullpageMobile.removeClass('is-enabled');
             $.fn.fullpage.destroy('all');
+          }
+        }
+      }
+
+      // events
+      function onLeaveCb(from, to, dir) {
+        var $portfolio = $('.portfolio');
+        if ($portfolio.length > 0) {
+          var $sections = $portfolio.find('.section');
+          var $nextSection = $($sections[to]);
+          var color = $nextSection.data('header-color');
+          if (color === 'white') {
+            $('.header__right').addClass('mobile-black');
+          } else {
+            $('.header__right').removeClass('mobile-black');
           }
         }
       }

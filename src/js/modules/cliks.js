@@ -61,6 +61,20 @@
           $('.vacancies__content').fadeOut();
           $('.vacancies__about').fadeOut();
           $('.vacancies__main').css('display', 'block');
+          var $img = $(this)
+            .closest('.vacancies__grid')
+            .find('.vacancies__image');
+          var $title = $(this)
+            .closest('.vacancies__grid')
+            .find('.vacancies__title');
+
+          $('.vacancies__main .vacancies__right')
+            .find('.vacancies__image')
+            .html($img);
+          $('.vacancies__main .vacancies__right')
+            .find('.vacancies__title')
+            .html($title);
+
           $('.vacancies__main .vacancies__right').fadeIn();
         })
 

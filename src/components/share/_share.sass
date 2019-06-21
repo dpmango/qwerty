@@ -1,5 +1,4 @@
 .share
-  display: none !important
   position: absolute
   padding: 5px 10px
   background: white
@@ -10,15 +9,56 @@
   display: flex
   align-items: center
   transform: translateX(-50%)
+  opacity: 0
+  pointer-events: none
   transition: opacity .25s $ease
+  &:hover
+    opacity: 1
+    pointer-events: all
   &::before
     display: inline-block
     content: ' '
     position: absolute
+    z-index: 1
     size: 10px
     left: 50%
     bottom: -7px
     transform: rotate(45deg) translateX(-50%)
     background: white
   &__btn
+    position: relative
+    z-index: 2
     padding: 5px
+    min-size: 32px
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    font-size: 0
+    background: $colorPrimary
+    color: white
+    margin-right: 7px
+    transition: .25s ease
+    &:hover
+      opacity: .75
+    &:last-chold
+      margin-right: 0
+    &--facebook
+      background-color: $facebook
+      .ico
+        font-size: 15px
+    &--twitter
+      background-color: $twitter
+      .ico
+        font-size: 13px
+    &--vk
+      background-color: $vk
+      .ico
+        font-size: 16px
+
++r($md)
+  .share
+    left: auto
+    transform: none
+    right: 0

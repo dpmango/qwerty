@@ -1,25 +1,32 @@
 .share
-  span.share__btn(
+  span.share__btn.share__btn--facebook(
     title="share on facebook"
     aria-label="share on facebook"
     data-sharer="facebook"
     data-hashtag="qwerty"
     data-url="http://qwerty-studio.surge.sh/blog-page.html")
-    +svgColor('facebook-new')
-  span.share__btn(
+    +svgMono('facebook2')
+  span.share__btn.share__btn--twitter(
     title="share on twitter"
     aria-label="share on twitter"
     data-sharer="twitter"
     data-title="Page title"
     data-hashtags="qwerty"
     data-url="http://qwerty-studio.surge.sh/blog-page.html")
-    +svgMono('social-twitter')
-  span.share__btn(
-    title="share on pinterest"
-    aria-label="share on pinterest"
-    data-sharer="pinterest"
+    +svgMono('twitter')
+  span.share__btn.share__btn--vk(
+    title="share on vk"
+    aria-label="share on vk"
+    data-sharer="vk"
+    data-title="Page title"
     data-url="http://qwerty-studio.surge.sh/blog-page.html")
-    +svgMono('social-pinterest')
+    +svgMono('vk')
+  //- span.share__btn(
+  //-   title="share on pinterest"
+  //-   aria-label="share on pinterest"
+  //-   data-sharer="pinterest"
+  //-   data-url="http://qwerty-studio.surge.sh/blog-page.html")
+  //-   +svgMono('social-pinterest')
 
 
   //- script(type='text/javascript').
